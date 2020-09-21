@@ -1,0 +1,3013 @@
+/*! exports provided: ADD_COMMENT, ADD_MESSAGE, SET_APIERROR, RESET_APIERROR, COPY, COPY_CONTENT, CREATE_CONTENT, CREATE_GROUP, CREATE_USER, CUT, DELETE_COMMENT, DELETE_CONTENT, DELETE_GROUP, DELETE_USER, EMAIL_NOTIFICATION, EXPAND_TOOLBAR, INITIAL_PASSWORD, GET_BREADCRUMBS, GET_CONTENT, POST_CONTROLPANEL, GET_CONTROLPANEL, DELETE_CONTROLPANEL, UPDATE_CONTROLPANEL, GET_DIFF, GET_GROUP, GET_HISTORY, GET_NAVIGATION, GET_PRINCIPALS, GET_QUERYSTRING, GET_QUERYSTRING_RESULTS, GET_SCHEMA, POST_SCHEMA, PUT_SCHEMA, UPDATE_SCHEMA, DELETE_SCHEMA, GET_SHARING, GET_TRANSLATION_LOCATOR, GET_TYPES, GET_USER, GET_VOCABULARY, GET_VOCABULARY_TOKEN_TITLE, GET_WORKFLOW, GET_WORKFLOW_MULTIPLE, INSTALL_ADDON, LIST_ACTIONS, LIST_ADDONS, LIST_COMMENTS, LIST_CONTROLPANELS, LIST_GROUPS, LIST_ROLES, LIST_USERS, LOGIN, LOGIN_RENEW, LOGOUT, ORDER_CONTENT, MOVE_CONTENT, REMOVE_MESSAGE, PURGE_MESSAGES, RESET_SEARCH_CONTENT, RESET_CONTENT, RESET_PASSWORD, REVERT_HISTORY, SEARCH_CONTENT, SET_SIDEBAR_TAB, TRANSITION_WORKFLOW, UNINSTALL_ADDON, UPDATE_CONTENT, UPDATE_COMMENT, UPDATE_GROUP, UPDATE_PASSWORD, UPDATE_SHARING, UPDATE_USER, UPGRADE_ADDON, SYSTEM_INFORMATION, DATABASE_INFORMATION */
+
+/*! exports provided: ATTRIBUTE_NAMES, TAG_NAMES, VALID_TAG_NAMES, TAG_PROPERTIES, REACT_TAG_MAP, HELMET_PROPS, HTML_TAG_MAP, SELF_CLOSING_TAGS, HELMET_ATTRIBUTE */
+
+/*! exports provided: Api, getAPIResourceWithAuth, Html, getAuthToken, persistAuthToken, addAppURL, flattenHTMLToAppURL, flattenToAppURL, isInternalURL, getParentUrl, getBaseUrl, getIcon, getView, isCmsUi, getId, generateSitemap, nestContent, getLayoutFieldname, getBlocks, getBlocksFieldname, getBlocksLayoutFieldname, hasBlocksData, blockHasValue, BodyClass, ScrollToTop, getBoolean, getVocabFromHint, getVocabFromField, getVocabFromItems, getFieldsVocabulary, AlignBlock, Helmet, FormValidation, messages, difference, safeWrapper, applyConfig */
+
+/*! exports provided: App, AppExtras, View, Header, Logo, Anontools, Navigation, Breadcrumbs, SearchWidget, Footer, Title, DefaultView, Pagination, Tags, OutdatedBrowser, LanguageSelector, Error, NotFound, Forbidden, Unauthorized, Icon, ConditionalLink, ContactForm, Login, Logout, Sitemap, Search, Comments, SocialSharing, Register, PasswordReset, RequestPasswordReset, ChangePassword, PersonalPreferences, PersonalInformation, CreateTranslation, FileView, ImageView, NewsItemView, EventView, ListingView, SummaryView, TabularView, AlbumView, Actions, Add, AddonsControlpanel, Contents, Circle, DatabaseInformation, Controlpanel, Controlpanels, ContentTypes, ContentType, ContentTypeLayout, ContentTypeSchema, ContentTypesActions, UsersControlpanel, ModerateComments, VersionOverview, Delete, Diff, Display, Edit, ModalForm, History, Sharing, Workflow, Messages, BlockChooser, Toolbar, Sidebar, SidebarPortal, PersonalTools, More, Types, Toast, Form, Field, SearchTags, CommentEditModal, ContentsIndexHeader, ContentsItem, ContentsUploadModal, ContentsPropertiesModal, ContentsRenameModal, ContentsWorkflowModal, ContentsTagsModal, UsersControlpanelUser, UsersControlpanelGroups, DiffField, FormFieldWrapper, ArrayWidget, CheckboxWidget, DatetimeWidget, RecurrenceWidget, FileWidget, PasswordWidget, ReferenceWidget, SchemaWidget, SchemaWidgetFieldset, SelectWidget, TextareaWidget, TextWidget, WysiwygWidget, ObjectBrowserWidget, ObjectBrowserWidgetMode, EditDescriptionBlock, EditTitleBlock, EditToCBlock, EditTextBlock, EditImageBlock, EditListingBlock, EditVideoBlock, EditBlock, EditHeroImageLeftBlock, ViewHeroImageLeftBlock, EditMapBlock, EditHTMLBlock, ViewDescriptionBlock, ViewTitleBlock, ViewToCBlock, ViewTextBlock, ViewImageBlock, ViewListingBlock, ViewVideoBlock, ViewMapBlock, ViewHTMLBlock, ListingBlockBody, ListingBlockData, ListingBlockStyle, ListingBlockMore, ListingBlockSidebar, QuerystringWidget, ImageSidebar, MapsSidebar, VideoSidebar, LeadImageSidebar, BlockSettingsSidebar, BlockSettingsSchema, TextSettingsSchema, ImageSettingsSchema, ToCSettingsSchema */
+
+/*! exports provided: BlockquoteButton, BoldButton, CalloutButton, ItalicButton, HeadlineTwoButton, HeadlineThreeButton, OrderedListButton, UnorderedListButton */
+
+/*! exports provided: ContentsIndexHeaderComponent, default */
+
+/*! exports provided: DatetimeWidget, RecurrenceWidget, widgetMapping, defaultWidget */
+
+/*! exports provided: Helmet, default */
+
+/*! exports provided: ObjectBrowserWidgetMode, default */
+
+/*! exports provided: Option, DropdownIndicator, selectTheme, customSelectStyles */
+
+/*! exports provided: SchemaWidgetFieldsetComponent, default */
+
+/*! exports provided: __test__, default */
+
+/*! exports provided: addComment, listComments, deleteComment, updateComment */
+
+/*! exports provided: addMessage, removeMessage, purgeMessages */
+
+/*! exports provided: api, crashReporter */
+
+/*! exports provided: convertReactPropstoHtmlAttributes, handleClientStateChange, mapStateOnServer, reducePropsToState, requestAnimationFrame, warn */
+
+/*! exports provided: copyContent, moveContent, copy, cut */
+
+/*! exports provided: createContent, deleteContent, updateContent, orderContent, sortContent, getContent, resetContent */
+
+/*! exports provided: createGroup, deleteGroup, getGroup, listGroups, updateGroup */
+
+/*! exports provided: createUser, deleteUser, getUser, listUsers, updateUser, updatePassword, setInitialPassword, resetPassword */
+
+/*! exports provided: datesForDisplay, When, Recurrence */
+
+/*! exports provided: default */
+
+/*! exports provided: difference, safeWrapper, applyConfig */
+
+/*! exports provided: emailNotification */
+
+/*! exports provided: extendedBlockRenderMap, blockStyleFn, listBlockTypes */
+
+/*! exports provided: generateSitemap */
+
+/*! exports provided: getAPIResourceWithAuth */
+
+/*! exports provided: getAuthToken, persistAuthToken */
+
+/*! exports provided: getBaseUrl, getParentUrl, getId, getView, getIcon, flattenToAppURL, isCmsUi, flattenHTMLToAppURL, addAppURL, isInternalURL */
+
+/*! exports provided: getBlocksFieldname, getBlocksLayoutFieldname, hasBlocksData, blockHasValue, getBlocks */
+
+/*! exports provided: getBoolean, getVocabFromHint, getVocabFromField, getVocabFromItems, getFieldsVocabulary */
+
+/*! exports provided: getBreadcrumbs */
+
+/*! exports provided: getControlpanel, postControlpanel, deleteControlpanel, listControlpanels, updateControlpanel, getSystemInformation, getDatabaseInformation */
+
+/*! exports provided: getDiff */
+
+/*! exports provided: getHistory, revertHistory */
+
+/*! exports provided: getIcon, ContentsItemComponent, default */
+
+/*! exports provided: getNavigation */
+
+/*! exports provided: getParentURL, default */
+
+/*! exports provided: getQueryStringResults */
+
+/*! exports provided: getQuerystring */
+
+/*! exports provided: getSchema, postSchema, putSchema, updateSchema */
+
+/*! exports provided: getTranslationLocator */
+
+/*! exports provided: getTypes */
+
+/*! exports provided: getVocabulary, getVocabularyTokenTitle */
+
+/*! exports provided: getWorkflow, transitionWorkflow */
+
+/*! exports provided: groupBlocksOrder, requiredBlocks, blocksConfig, initialBlocks */
+
+/*! exports provided: inlineToolbarButtons, default */
+
+/*! exports provided: layoutViews, contentTypesViews, defaultView, errorViews */
+
+/*! exports provided: listActions */
+
+/*! exports provided: listActions, getBreadcrumbs, setExpandedToolbar, copy, cut, copyContent, moveContent, installAddon, listAddons, uninstallAddon, upgradeAddon, addComment, deleteComment, listComments, updateComment, createContent, deleteContent, updateContent, getContent, orderContent, sortContent, resetContent, getControlpanel, postControlpanel, deleteControlpanel, listControlpanels, updateControlpanel, getSystemInformation, getDatabaseInformation, getDiff, emailNotification, createGroup, deleteGroup, getGroup, listGroups, updateGroup, getHistory, revertHistory, addMessage, removeMessage, purgeMessages, getNavigation, listRoles, getSchema, postSchema, putSchema, updateSchema, resetSearchContent, searchContent, updateSharing, getSharing, getTypes, createUser, deleteUser, getUser, listUsers, setInitialPassword, resetPassword, updatePassword, updateUser, login, loginRenew, logout, getVocabulary, getVocabularyTokenTitle, getWorkflow, transitionWorkflow, getQuerystring, getQueryStringResults, setSidebarTab, getTranslationLocator */
+
+/*! exports provided: listAddons, installAddon, uninstallAddon, upgradeAddon */
+
+/*! exports provided: listRoles */
+
+/*! exports provided: login, loginRenew, logout */
+
+/*! exports provided: matchesEntityType, default */
+
+/*! exports provided: messages */
+
+/*! exports provided: name, description, maintainers, license, version, repository, customizationPaths, bugs, homepage, keywords, scripts, bundlesize, bundlewatch, jest, prettier, stylelint, browserslist, release-it, husky, lint-staged, engines, dependencies, devDependencies, resolutions, default */
+
+/*! exports provided: nestContent, getLayoutFieldname */
+
+/*! exports provided: nonContentRoutes */
+
+/*! exports provided: options, default */
+
+/*! exports provided: searchContent, resetSearchContent */
+
+/*! exports provided: setExpandedToolbar */
+
+/*! exports provided: setSidebarTab */
+
+/*! exports provided: settings, widgets, views, blocks, addonRoutes, addonReducers */
+
+/*! exports provided: updateSharing, getSharing */
+
+/*! no static exports found */
+
+/*!**********************!*\
+  !*** ./package.json ***!
+  \**********************/
+
+/*!**********************!*\
+  !*** ./src/store.js ***!
+  \**********************/
+
+/*!**********************!*\
+  !*** util (ignored) ***!
+  \**********************/
+
+/*!***********************!*\
+  !*** ./src/error.jsx ***!
+  \***********************/
+
+/*!**************************!*\
+  !*** ./src/icons/cd.svg ***!
+  \**************************/
+
+/*!**************************!*\
+  !*** ./src/icons/up.svg ***!
+  \**************************/
+
+/*!***************************!*\
+  !*** ./src/icons/add.svg ***!
+  \***************************/
+
+/*!***************************!*\
+  !*** ./src/icons/cut.svg ***!
+  \***************************/
+
+/*!***************************!*\
+  !*** ./src/icons/end.svg ***!
+  \***************************/
+
+/*!***************************!*\
+  !*** ./src/icons/key.svg ***!
+  \***************************/
+
+/*!***************************!*\
+  !*** ./src/icons/nav.svg ***!
+  \***************************/
+
+/*!***************************!*\
+  !*** ./src/icons/nib.svg ***!
+  \***************************/
+
+/*!***************************!*\
+  !*** ./src/icons/pen.svg ***!
+  \***************************/
+
+/*!***************************!*\
+  !*** ./src/icons/row.svg ***!
+  \***************************/
+
+/*!***************************!*\
+  !*** ./src/icons/rss.svg ***!
+  \***************************/
+
+/*!***************************!*\
+  !*** ./src/icons/spy.svg ***!
+  \***************************/
+
+/*!***************************!*\
+  !*** ./src/icons/tab.svg ***!
+  \***************************/
+
+/*!***************************!*\
+  !*** ./src/icons/tag.svg ***!
+  \***************************/
+
+/*!***************************!*\
+  !*** ./src/icons/toc.svg ***!
+  \***************************/
+
+/*!***************************!*\
+  !*** ./src/icons/usb.svg ***!
+  \***************************/
+
+/*!****************************!*\
+  !*** ./src/icons/apps.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/back.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/bell.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/blog.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/bold.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/book.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/cell.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/code.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/copy.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/dots.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/down.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/drag.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/file.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/flag.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/form.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/help.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/hero.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/hide.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/home.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/info.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/last.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/link.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/lock.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/menu.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/more.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/move.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/news.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/open.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/pack.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/page.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/play.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/redo.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/rule.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/save.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/send.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/show.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/spam.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/star.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/stop.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/sync.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/text.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/tiny.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/tune.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/undo.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/user.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/icons/zoom.svg ***!
+  \****************************/
+
+/*!****************************!*\
+  !*** ./src/styleguide.jsx ***!
+  \****************************/
+
+/*!*****************************!*\
+  !*** ./src/config/index.js ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons sync svg$ ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/ahead.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/alarm.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/alert.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/audio.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/blank.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/block.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/check.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/clean.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/clear.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/clock.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/cloud.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/crown.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/email.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/enter.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/error.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/event.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/first.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/flash.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/globe.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/group.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/heart.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/image.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/inbox.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/mouse.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/paint.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/paste.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/pause.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/plone.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/quote.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/radio.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/ready.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/reset.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/ruler.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/share.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/shift.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/spray.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/state.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/table.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/theme.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/video.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/watch.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/world.svg ***!
+  \*****************************/
+
+/*!*****************************!*\
+  !*** ./src/icons/yield.svg ***!
+  \*****************************/
+
+/*!******************************!*\
+  !*** ./src/actions/index.js ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/config/Views.jsx ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/helpers/index.js ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/add-on.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/binder.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/camera.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/chrono.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/column.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/delete.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/filter.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/folder.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/format.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/images.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/indent.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/italic.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/laptop.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/mobile.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/option.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/pencil.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/random.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/record.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/reload.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/remove.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/rename.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/repeat.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/rewind.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/roller.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/saving.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/screen.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/server.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/slider.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/tablet.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/target.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/trophy.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/unlink.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/unlock.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/up-key.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/upload.svg ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./src/icons/volume.svg ***!
+  \******************************/
+
+/*!*******************************!*\
+  !*** ./src/config/Blocks.jsx ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/caution.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/command.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/comment.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/compare.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/console.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/content.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/editing.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/ereaser.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/freedom.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/heading.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/headset.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/log-out.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/mistake.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/move-up.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/neutral.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/opening.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/outdent.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/payment.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/pending.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/printer.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/refresh.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/replace.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/restore.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/retract.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/scanner.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/sort-up.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/subtext.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/summary.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/trolley.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/warning.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/icons/zoom-in.svg ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/middleware/api.js ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/reducers/index.js ***!
+  \*******************************/
+
+/*!********************************!*\
+  !*** ./src/config/Widgets.jsx ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/helpers/Api/Api.js ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/helpers/Url/Url.js ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/add-user.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/bookmark.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/calendar.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/computer.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/down-key.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/download.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/envelope.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/function.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/keyboard.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/language.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/left-key.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/lock-off.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/menu-alt.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/no-entry.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/registry.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/security.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/settings.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/spacebar.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/sub-left.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/subindex.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/triangle.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/verified.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/vertical.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/zoom-off.svg ***!
+  \********************************/
+
+/*!********************************!*\
+  !*** ./src/icons/zoom-out.svg ***!
+  \********************************/
+
+/*!*********************************!*\
+  !*** ./docs/styleguide/rsg.css ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/components/index.js ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/back-down.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/backspace.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/beginning.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/briefcase.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/caps-lock.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/connector.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/delighted.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/forbidden.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/half-star.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/image-fit.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/interface.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/load-icons.js ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/megaphone.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/move-down.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/move-last.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/paragraph.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/right-key.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/satisfied.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/semaphore.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/shift-key.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/sort-down.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/sub-right.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/translate.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/icons/underline.svg ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/middleware/index.js ***!
+  \*********************************/
+
+/*!**********************************!*\
+  !*** ./src/actions/diff/diff.js ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/constants/Indexes.js ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/constants/Layouts.js ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/accessible.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/align-left.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/attachment.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/blog-entry.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/circle-top.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/collection.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/compare-up.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/delete-key.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/discussion.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/enterprise.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/first-aids.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/frustrated.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/fullscreen.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/guillotina.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/horizontal.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/image-full.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/image-left.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/image-wide.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/microphone.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/move-first.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/navigation.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/properties.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/select-all.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/star-empty.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/subheading.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/superindex.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/television.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/volume-low.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/volume-off.svg ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./src/icons/watch-side.svg ***!
+  \**********************************/
+
+/*!***********************************!*\
+  !*** ./src/helpers/Html/Html.jsx ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** ./src/icons/align-right.svg ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** ./src/icons/application.svg ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** ./src/icons/circle-left.svg ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** ./src/icons/circle-menu.svg ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** ./src/icons/circle-plus.svg ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** ./src/icons/collapse-up.svg ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** ./src/icons/description.svg ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** ./src/icons/exclamation.svg ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** ./src/icons/highlighter.svg ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** ./src/icons/image-right.svg ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** ./src/icons/list-arrows.svg ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** ./src/icons/list-bullet.svg ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** ./src/icons/maintenance.svg ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** ./src/icons/show-blocks.svg ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** ./src/icons/spreadsheet.svg ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** ./src/icons/videocamera.svg ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** ./src/reducers/diff/diff.js ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** ./src/reducers/form/form.js ***!
+  \***********************************/
+
+/*!************************************!*\
+  !*** ./src/actions/roles/roles.js ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/actions/types/types.js ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/actions/users/users.js ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/constants/Languages.js ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/constants/Workflows.js ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/helpers/Utils/Utils.js ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/icons/add-document.svg ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/icons/align-center.svg ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/icons/bell-ringing.svg ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/icons/border-style.svg ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/icons/border-width.svg ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/icons/circle-minus.svg ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/icons/circle-right.svg ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/icons/compare-down.svg ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/icons/disconnected.svg ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/icons/dissatisfied.svg ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/icons/fast-forward.svg ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/icons/find-replace.svg ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/icons/finger-print.svg ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/icons/format-clear.svg ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/icons/presentation.svg ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/icons/table-header.svg ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/icons/trolley-full.svg ***!
+  \************************************/
+
+/*!*************************************!*\
+  !*** ./src/icons/accessibility.svg ***!
+  \*************************************/
+
+/*!*************************************!*\
+  !*** ./src/icons/align-justify.svg ***!
+  \*************************************/
+
+/*!*************************************!*\
+  !*** ./src/icons/backspace-key.svg ***!
+  \*************************************/
+
+/*!*************************************!*\
+  !*** ./src/icons/cap-locks-key.svg ***!
+  \*************************************/
+
+/*!*************************************!*\
+  !*** ./src/icons/circle-bottom.svg ***!
+  \*************************************/
+
+/*!*************************************!*\
+  !*** ./src/icons/collapse-down.svg ***!
+  \*************************************/
+
+/*!*************************************!*\
+  !*** ./src/icons/configuration.svg ***!
+  \*************************************/
+
+/*!*************************************!*\
+  !*** ./src/icons/indeterminate.svg ***!
+  \*************************************/
+
+/*!*************************************!*\
+  !*** ./src/icons/keyboard-hide.svg ***!
+  \*************************************/
+
+/*!*************************************!*\
+  !*** ./src/icons/list-numbered.svg ***!
+  \*************************************/
+
+/*!*************************************!*\
+  !*** ./src/icons/radio-checked.svg ***!
+  \*************************************/
+
+/*!*************************************!*\
+  !*** ./src/icons/strikethrough.svg ***!
+  \*************************************/
+
+/*!*************************************!*\
+  !*** ./src/icons/tab-backwards.svg ***!
+  \*************************************/
+
+/*!*************************************!*\
+  !*** ./src/reducers/roles/roles.js ***!
+  \*************************************/
+
+/*!*************************************!*\
+  !*** ./src/reducers/types/types.js ***!
+  \*************************************/
+
+/*!*************************************!*\
+  !*** ./src/reducers/users/users.js ***!
+  \*************************************/
+
+/*!**************************************!*\
+  !*** ./src/actions/addons/addons.js ***!
+  \**************************************/
+
+/*!**************************************!*\
+  !*** ./src/actions/groups/groups.js ***!
+  \**************************************/
+
+/*!**************************************!*\
+  !*** ./src/actions/schema/schema.js ***!
+  \**************************************/
+
+/*!**************************************!*\
+  !*** ./src/actions/search/search.js ***!
+  \**************************************/
+
+/*!**************************************!*\
+  !*** ./src/constants/ActionTypes.js ***!
+  \**************************************/
+
+/*!**************************************!*\
+  !*** ./src/helpers/Blocks/Blocks.js ***!
+  \**************************************/
+
+/*!**************************************!*\
+  !*** ./src/helpers/Helmet/Helmet.js ***!
+  \**************************************/
+
+/*!**************************************!*\
+  !*** ./src/icons/circle-dismiss.svg ***!
+  \**************************************/
+
+/*!**************************************!*\
+  !*** ./src/icons/microphone-off.svg ***!
+  \**************************************/
+
+/*!**************************************!*\
+  !*** ./src/icons/radio-disabled.svg ***!
+  \**************************************/
+
+/*!**************************************!*\
+  !*** ./src/icons/recent-changes.svg ***!
+  \**************************************/
+
+/*!***************************************!*\
+  !*** ./src/icons/content-listing.svg ***!
+  \***************************************/
+
+/*!***************************************!*\
+  !*** ./src/icons/divide-vertical.svg ***!
+  \***************************************/
+
+/*!***************************************!*\
+  !*** ./src/icons/doument-details.svg ***!
+  \***************************************/
+
+/*!***************************************!*\
+  !*** ./src/icons/radio-unchecked.svg ***!
+  \***************************************/
+
+/*!***************************************!*\
+  !*** ./src/icons/videocamera-off.svg ***!
+  \***************************************/
+
+/*!***************************************!*\
+  !*** ./src/reducers/addons/addons.js ***!
+  \***************************************/
+
+/*!***************************************!*\
+  !*** ./src/reducers/groups/groups.js ***!
+  \***************************************/
+
+/*!***************************************!*\
+  !*** ./src/reducers/schema/schema.js ***!
+  \***************************************/
+
+/*!***************************************!*\
+  !*** ./src/reducers/search/search.js ***!
+  \***************************************/
+
+/*!****************************************!*\
+  !*** ./src/actions/actions/actions.js ***!
+  \****************************************/
+
+/*!****************************************!*\
+  !*** ./src/actions/content/content.js ***!
+  \****************************************/
+
+/*!****************************************!*\
+  !*** ./src/actions/history/history.js ***!
+  \****************************************/
+
+/*!****************************************!*\
+  !*** ./src/actions/sharing/sharing.js ***!
+  \****************************************/
+
+/*!****************************************!*\
+  !*** ./src/actions/sidebar/sidebar.js ***!
+  \****************************************/
+
+/*!****************************************!*\
+  !*** ./src/actions/toolbar/toolbar.js ***!
+  \****************************************/
+
+/*!****************************************!*\
+  !*** ./src/helpers/Content/Content.js ***!
+  \****************************************/
+
+/*!****************************************!*\
+  !*** ./src/helpers/Sitemap/Sitemap.js ***!
+  \****************************************/
+
+/*!****************************************!*\
+  !*** ./src/icons/checkbox-checked.svg ***!
+  \****************************************/
+
+/*!****************************************!*\
+  !*** ./src/icons/content-existing.svg ***!
+  \****************************************/
+
+/*!*****************************************!*\
+  !*** ./src/config/NonContentRoutes.jsx ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./src/icons/checkbox-disabled.svg ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./src/icons/configuration-app.svg ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./src/icons/divide-horizontal.svg ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./src/icons/special-character.svg ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./src/middleware/crashReporter.js ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./src/reducers/actions/actions.js ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./src/reducers/content/content.js ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./src/reducers/history/history.js ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./src/reducers/sharing/sharing.js ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./src/reducers/sidebar/sidebar.js ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./src/reducers/toolbar/toolbar.js ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** /tmp/tmp-3063986-Gyx4Vlmr9D8O-.js ***!
+  \*****************************************/
+
+/*!******************************************!*\
+  !*** ./src/actions/comments/comments.js ***!
+  \******************************************/
+
+/*!******************************************!*\
+  !*** ./src/actions/messages/messages.js ***!
+  \******************************************/
+
+/*!******************************************!*\
+  !*** ./src/actions/workflow/workflow.js ***!
+  \******************************************/
+
+/*!******************************************!*\
+  !*** ./src/components/theme/App/App.jsx ***!
+  \******************************************/
+
+/*!******************************************!*\
+  !*** ./src/icons/checkbox-unchecked.svg ***!
+  \******************************************/
+
+/*!******************************************!*\
+  !*** ./src/icons/headset-microphone.svg ***!
+  \******************************************/
+
+/*!******************************************!*\
+  !*** ./src/icons/registry-resources.svg ***!
+  \******************************************/
+
+/*!*******************************************!*\
+  !*** ./src/components/manage/Add/Add.jsx ***!
+  \*******************************************/
+
+/*!*******************************************!*\
+  !*** ./src/helpers/Helmet/HelmetUtils.js ***!
+  \*******************************************/
+
+/*!*******************************************!*\
+  !*** ./src/icons/radio-indeterminate.svg ***!
+  \*******************************************/
+
+/*!*******************************************!*\
+  !*** ./src/reducers/apierror/apierror.js ***!
+  \*******************************************/
+
+/*!*******************************************!*\
+  !*** ./src/reducers/comments/comments.js ***!
+  \*******************************************/
+
+/*!*******************************************!*\
+  !*** ./src/reducers/messages/messages.js ***!
+  \*******************************************/
+
+/*!*******************************************!*\
+  !*** ./src/reducers/workflow/workflow.js ***!
+  \*******************************************/
+
+/*!********************************************!*\
+  !*** ./src/actions/clipboard/clipboard.js ***!
+  \********************************************/
+
+/*!********************************************!*\
+  !*** ./src/components/theme/Icon/Icon.jsx ***!
+  \********************************************/
+
+/*!********************************************!*\
+  !*** ./src/components/theme/Logo/Logo.jsx ***!
+  \********************************************/
+
+/*!********************************************!*\
+  !*** ./src/components/theme/Logo/Logo.svg ***!
+  \********************************************/
+
+/*!********************************************!*\
+  !*** ./src/components/theme/Tags/Tags.jsx ***!
+  \********************************************/
+
+/*!********************************************!*\
+  !*** ./src/components/theme/View/View.jsx ***!
+  \********************************************/
+
+/*!********************************************!*\
+  !*** ./src/constants/ControlpanelIcons.js ***!
+  \********************************************/
+
+/*!********************************************!*\
+  !*** ./src/helpers/AuthToken/AuthToken.js ***!
+  \********************************************/
+
+/*!*********************************************!*\
+  !*** ./src/components/manage/Diff/Diff.jsx ***!
+  \*********************************************/
+
+/*!*********************************************!*\
+  !*** ./src/components/manage/Edit/Edit.jsx ***!
+  \*********************************************/
+
+/*!*********************************************!*\
+  !*** ./src/components/manage/Form/Form.jsx ***!
+  \*********************************************/
+
+/*!*********************************************!*\
+  !*** ./src/helpers/BodyClass/BodyClass.jsx ***!
+  \*********************************************/
+
+/*!*********************************************!*\
+  !*** ./src/reducers/clipboard/clipboard.js ***!
+  \*********************************************/
+
+/*!**********************************************!*\
+  !*** ./src/actions/navigation/navigation.js ***!
+  \**********************************************/
+
+/*!**********************************************!*\
+  !*** ./src/components/manage/Form/Field.jsx ***!
+  \**********************************************/
+
+/*!**********************************************!*\
+  !*** ./src/components/theme/Error/Error.jsx ***!
+  \**********************************************/
+
+/*!**********************************************!*\
+  !*** ./src/components/theme/Login/Login.jsx ***!
+  \**********************************************/
+
+/*!**********************************************!*\
+  !*** ./src/components/theme/Title/Title.jsx ***!
+  \**********************************************/
+
+/*!**********************************************!*\
+  !*** ./src/config/RichTextEditor/Blocks.jsx ***!
+  \**********************************************/
+
+/*!**********************************************!*\
+  !*** ./src/config/RichTextEditor/Styles.jsx ***!
+  \**********************************************/
+
+/*!**********************************************!*\
+  !*** ./src/config/RichTextEditor/ToHTML.jsx ***!
+  \**********************************************/
+
+/*!**********************************************!*\
+  !*** ./src/icons/checkbox-indeterminate.svg ***!
+  \**********************************************/
+
+/*!***********************************************!*\
+  !*** ./src/components/manage/Toast/Toast.jsx ***!
+  \***********************************************/
+
+/*!***********************************************!*\
+  !*** ./src/config/RichTextEditor/Plugins.jsx ***!
+  \***********************************************/
+
+/*!***********************************************!*\
+  !*** ./src/helpers/AlignBlock/AlignBlock.jsx ***!
+  \***********************************************/
+
+/*!***********************************************!*\
+  !*** ./src/helpers/Helmet/HelmetConstants.js ***!
+  \***********************************************/
+
+/*!***********************************************!*\
+  !*** ./src/reducers/navigation/navigation.js ***!
+  \***********************************************/
+
+/*!************************************************!*\
+  !*** ./src/actions/breadcrumbs/breadcrumbs.js ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./src/actions/querystring/querystring.js ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./src/actions/userSession/userSession.js ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./src/components/manage/Toolbar/More.jsx ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./src/components/theme/Footer/Footer.jsx ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./src/components/theme/Header/Header.jsx ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./src/components/theme/Logout/Logout.jsx ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./src/components/theme/Search/Search.jsx ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./src/components/theme/View/FileView.jsx ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./src/components/theme/View/LinkView.jsx ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./src/config/RichTextEditor/FromHTML.jsx ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./src/helpers/Api/APIResourceWithAuth.js ***!
+  \************************************************/
+
+/*!*************************************************!*\
+  !*** ./src/components/manage/Delete/Delete.jsx ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./src/components/manage/Toolbar/Stats.jsx ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./src/components/manage/Toolbar/Types.jsx ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./src/components/theme/View/AlbumView.jsx ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./src/components/theme/View/EventView.jsx ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./src/components/theme/View/ImageView.jsx ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./src/helpers/ScrollToTop/ScrollToTop.jsx ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./src/reducers/breadcrumbs/breadcrumbs.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./src/reducers/querystring/querystring.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./src/reducers/userSession/userSession.js ***!
+  \*************************************************/
+
+/*!**************************************************!*\
+  !*** ./src/actions/translations/translations.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./src/actions/vocabularies/vocabularies.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./src/components/manage/Diff/DiffField.jsx ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./src/components/manage/Form/ModalForm.jsx ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./src/components/theme/Sitemap/Sitemap.jsx ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./src/helpers/Vocabularies/Vocabularies.js ***!
+  \**************************************************/
+
+/*!***************************************************!*\
+  !*** ./src/components/manage/Actions/Actions.jsx ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./src/components/manage/Blocks/ToC/Edit.jsx ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./src/components/manage/Blocks/ToC/View.jsx ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./src/components/manage/Contents/circle.jsx ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./src/components/manage/Display/Display.jsx ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./src/components/manage/Form/InlineForm.jsx ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./src/components/manage/History/History.jsx ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./src/components/manage/Sharing/Sharing.jsx ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./src/components/manage/Sidebar/Sidebar.jsx ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./src/components/manage/Toolbar/Toolbar.jsx ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./src/components/theme/View/DefaultView.jsx ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./src/components/theme/View/ListingView.jsx ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./src/components/theme/View/SummaryView.jsx ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./src/components/theme/View/TabularView.jsx ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./src/reducers/vocabularies/vocabularies.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./theme/themes/pastanaga/extras/extras.less ***!
+  \***************************************************/
+
+/*!****************************************************!*\
+  !*** ./src/actions/controlpanels/controlpanels.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./src/components/manage/Blocks/HTML/Edit.jsx ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./src/components/manage/Blocks/HTML/View.jsx ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./src/components/manage/Blocks/Maps/Edit.jsx ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./src/components/manage/Blocks/Maps/View.jsx ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./src/components/manage/Blocks/Text/Edit.jsx ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./src/components/manage/Blocks/Text/View.jsx ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./src/components/theme/Comments/Comments.jsx ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./src/components/theme/NotFound/NotFound.jsx ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./src/components/theme/Register/Register.jsx ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./src/components/theme/Search/SearchTags.jsx ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./src/components/theme/View/NewsItemView.jsx ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./src/helpers/MessageLabels/MessageLabels.js ***!
+  \****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/components/manage/Blocks/Block/Edit.jsx ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/components/manage/Blocks/Image/Edit.jsx ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/components/manage/Blocks/Image/View.jsx ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/components/manage/Blocks/Table/Cell.jsx ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/components/manage/Blocks/Table/Edit.jsx ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/components/manage/Blocks/Table/View.jsx ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/components/manage/Blocks/Title/Edit.jsx ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/components/manage/Blocks/Title/View.jsx ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/components/manage/Blocks/ToC/Schema.jsx ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/components/manage/Blocks/Video/Edit.jsx ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/components/manage/Blocks/Video/View.jsx ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/components/manage/Contents/Contents.jsx ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/components/manage/Messages/Messages.jsx ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/components/manage/Toolbar/pastanaga.svg ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/components/manage/Widgets/UrlWidget.jsx ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/components/manage/Workflow/Workflow.jsx ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/reducers/browserdetect/browserdetect.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/reducers/controlpanels/controlpanels.js ***!
+  \*****************************************************/
+
+/*!******************************************************!*\
+  !*** ./locales lazy ^\.\/.*\.json$ namespace object ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./src/components/manage/AnchorPlugin/index.jsx ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./src/components/manage/Blocks/Text/Schema.jsx ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./src/components/manage/Widgets/FileWidget.jsx ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./src/components/manage/Widgets/TextWidget.jsx ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./src/components/theme/Anontools/Anontools.jsx ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./src/components/theme/AppExtras/AppExtras.jsx ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./src/components/theme/CorsError/CorsError.jsx ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./src/components/theme/Forbidden/Forbidden.jsx ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./src/components/theme/View/EventDatesInfo.jsx ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./src/helpers/FormValidation/FormValidation.js ***!
+  \******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./src/components/manage/Blocks/Block/Schema.jsx ***!
+  \*******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./src/components/manage/Blocks/Image/Schema.jsx ***!
+  \*******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./src/components/manage/Blocks/Listing/Edit.jsx ***!
+  \*******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./src/components/manage/Blocks/Listing/View.jsx ***!
+  \*******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./src/components/manage/Widgets/ArrayWidget.jsx ***!
+  \*******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./src/components/manage/Widgets/EmailWidget.jsx ***!
+  \*******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./src/components/manage/Widgets/TokenWidget.jsx ***!
+  \*******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./theme/themes/pastanaga/assets/fonts/icons.eot ***!
+  \*******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./theme/themes/pastanaga/assets/fonts/icons.svg ***!
+  \*******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./theme/themes/pastanaga/assets/fonts/icons.ttf ***!
+  \*******************************************************/
+
+/*!********************************************************!*\
+  !*** ./src/components/manage/Widgets/NumberWidget.jsx ***!
+  \********************************************************/
+
+/*!********************************************************!*\
+  !*** ./src/components/manage/Widgets/SchemaWidget.jsx ***!
+  \********************************************************/
+
+/*!********************************************************!*\
+  !*** ./src/components/manage/Widgets/SelectWidget.jsx ***!
+  \********************************************************/
+
+/*!********************************************************!*\
+  !*** ./src/components/theme/Navigation/Navigation.jsx ***!
+  \********************************************************/
+
+/*!********************************************************!*\
+  !*** ./src/components/theme/Pagination/Pagination.jsx ***!
+  \********************************************************/
+
+/*!********************************************************!*\
+  !*** ./theme/themes/pastanaga/assets/fonts/icons.woff ***!
+  \********************************************************/
+
+/*!*********************************************************!*\
+  !*** ./src/components/manage/Blocks/Block/Settings.jsx ***!
+  \*********************************************************/
+
+/*!*********************************************************!*\
+  !*** ./src/components/manage/Blocks/LeadImage/Edit.jsx ***!
+  \*********************************************************/
+
+/*!*********************************************************!*\
+  !*** ./src/components/manage/Blocks/LeadImage/View.jsx ***!
+  \*********************************************************/
+
+/*!*********************************************************!*\
+  !*** ./src/components/manage/Contents/ContentsItem.jsx ***!
+  \*********************************************************/
+
+/*!*********************************************************!*\
+  !*** ./src/components/manage/Sidebar/ObjectBrowser.jsx ***!
+  \*********************************************************/
+
+/*!*********************************************************!*\
+  !*** ./src/components/manage/Sidebar/SidebarPortal.jsx ***!
+  \*********************************************************/
+
+/*!*********************************************************!*\
+  !*** ./src/components/manage/Toolbar/PersonalTools.jsx ***!
+  \*********************************************************/
+
+/*!*********************************************************!*\
+  !*** ./src/components/manage/Widgets/SelectStyling.jsx ***!
+  \*********************************************************/
+
+/*!*********************************************************!*\
+  !*** ./src/components/manage/Widgets/WysiwygWidget.jsx ***!
+  \*********************************************************/
+
+/*!**********************************************************!*\
+  !*** ./src/components/manage/Blocks/Maps/block-maps.svg ***!
+  \**********************************************************/
+
+/*!**********************************************************!*\
+  !*** ./src/components/manage/Widgets/CheckboxWidget.jsx ***!
+  \**********************************************************/
+
+/*!**********************************************************!*\
+  !*** ./src/components/manage/Widgets/PasswordWidget.jsx ***!
+  \**********************************************************/
+
+/*!**********************************************************!*\
+  !*** ./src/components/manage/Widgets/TextareaWidget.jsx ***!
+  \**********************************************************/
+
+/*!**********************************************************!*\
+  !*** ./src/components/theme/Breadcrumbs/Breadcrumbs.jsx ***!
+  \**********************************************************/
+
+/*!**********************************************************!*\
+  !*** ./src/components/theme/ContactForm/ContactForm.jsx ***!
+  \**********************************************************/
+
+/*!***********************************************************!*\
+  !*** ./src/components/manage/Blocks/Description/Edit.jsx ***!
+  \***********************************************************/
+
+/*!***********************************************************!*\
+  !*** ./src/components/manage/Blocks/Description/View.jsx ***!
+  \***********************************************************/
+
+/*!***********************************************************!*\
+  !*** ./src/components/manage/Blocks/Maps/MapsSidebar.jsx ***!
+  \***********************************************************/
+
+/*!***********************************************************!*\
+  !*** ./src/components/manage/Toolbar/StandardWrapper.jsx ***!
+  \***********************************************************/
+
+/*!***********************************************************!*\
+  !*** ./src/components/manage/Toolbar/pastanaga-small.svg ***!
+  \***********************************************************/
+
+/*!***********************************************************!*\
+  !*** ./src/components/manage/Widgets/ReferenceWidget.jsx ***!
+  \***********************************************************/
+
+/*!************************************************************!*\
+  !*** ./src/actions/emailNotification/emailNotification.js ***!
+  \************************************************************/
+
+/*!************************************************************!*\
+  !*** ./src/actions/querystringsearch/querystringsearch.js ***!
+  \************************************************************/
+
+/*!************************************************************!*\
+  !*** ./src/components/manage/AnchorPlugin/linkStrategy.js ***!
+  \************************************************************/
+
+/*!************************************************************!*\
+  !*** ./src/components/manage/Blocks/Image/block-image.svg ***!
+  \************************************************************/
+
+/*!************************************************************!*\
+  !*** ./src/components/manage/Blocks/Video/block-video.svg ***!
+  \************************************************************/
+
+/*!************************************************************!*\
+  !*** ./src/components/manage/Sidebar/ObjectBrowserNav.jsx ***!
+  \************************************************************/
+
+/*!************************************************************!*\
+  !*** ./src/components/manage/Widgets/FormFieldWrapper.jsx ***!
+  \************************************************************/
+
+/*!************************************************************!*\
+  !*** ./src/components/theme/Comments/CommentEditModal.jsx ***!
+  \************************************************************/
+
+/*!************************************************************!*\
+  !*** ./src/components/theme/SearchWidget/SearchWidget.jsx ***!
+  \************************************************************/
+
+/*!************************************************************!*\
+  !*** ./src/components/theme/Unauthorized/Unauthorized.jsx ***!
+  \************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./src/components/manage/BlockChooser/BlockChooser.jsx ***!
+  \*************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./src/components/manage/Blocks/HeroImageLeft/Edit.jsx ***!
+  \*************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./src/components/manage/Blocks/HeroImageLeft/View.jsx ***!
+  \*************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./src/components/manage/Blocks/Image/ImageSidebar.jsx ***!
+  \*************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./src/components/manage/Blocks/Video/VideoSidebar.jsx ***!
+  \*************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./src/components/manage/Controlpanels/ContentType.jsx ***!
+  \*************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./src/components/manage/Sidebar/ObjectBrowserBody.jsx ***!
+  \*************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./src/components/manage/Widgets/QuerystringWidget.jsx ***!
+  \*************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./src/reducers/emailNotification/emailNotification.js ***!
+  \*************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./src/reducers/querystringsearch/querystringsearch.js ***!
+  \*************************************************************/
+
+/*!**************************************************************!*\
+  !*** ./src/components/manage/AnchorPlugin/utils/URLUtils.js ***!
+  \**************************************************************/
+
+/*!**************************************************************!*\
+  !*** ./src/components/manage/AnchorPlugin/utils/urlRegex.js ***!
+  \**************************************************************/
+
+/*!**************************************************************!*\
+  !*** ./src/components/manage/Blocks/Listing/ListingBody.jsx ***!
+  \**************************************************************/
+
+/*!**************************************************************!*\
+  !*** ./src/components/manage/Blocks/Listing/ListingData.jsx ***!
+  \**************************************************************/
+
+/*!**************************************************************!*\
+  !*** ./src/components/manage/Blocks/Listing/ListingMore.jsx ***!
+  \**************************************************************/
+
+/*!**************************************************************!*\
+  !*** ./src/components/manage/Contents/ContentsTagsModal.jsx ***!
+  \**************************************************************/
+
+/*!**************************************************************!*\
+  !*** ./src/components/manage/Controlpanels/ContentTypes.jsx ***!
+  \**************************************************************/
+
+/*!**************************************************************!*\
+  !*** ./src/components/manage/Controlpanels/Controlpanel.jsx ***!
+  \**************************************************************/
+
+/*!**************************************************************!*\
+  !*** ./src/components/manage/Preferences/ChangePassword.jsx ***!
+  \**************************************************************/
+
+/*!**************************************************************!*\
+  !*** ./src/components/theme/PasswordReset/PasswordReset.jsx ***!
+  \**************************************************************/
+
+/*!**************************************************************!*\
+  !*** ./src/components/theme/SocialSharing/SocialSharing.jsx ***!
+  \**************************************************************/
+
+/*!***************************************************************!*\
+  !*** ./src/components/manage/AnchorPlugin/utils/mailRegex.js ***!
+  \***************************************************************/
+
+/*!***************************************************************!*\
+  !*** ./src/components/manage/Blocks/Listing/ImageGallery.jsx ***!
+  \***************************************************************/
+
+/*!***************************************************************!*\
+  !*** ./src/components/manage/Blocks/Listing/ListingStyle.jsx ***!
+  \***************************************************************/
+
+/*!***************************************************************!*\
+  !*** ./src/components/manage/Controlpanels/Controlpanels.jsx ***!
+  \***************************************************************/
+
+/*!***************************************************************!*\
+  !*** ./src/components/manage/Widgets/ObjectBrowserWidget.jsx ***!
+  \***************************************************************/
+
+/*!****************************************************************!*\
+  !*** ./src/components/manage/Blocks/Image/ImageSizeWidget.jsx ***!
+  \****************************************************************/
+
+/*!****************************************************************!*\
+  !*** ./src/components/manage/Blocks/Listing/default-image.svg ***!
+  \****************************************************************/
+
+/*!****************************************************************!*\
+  !*** ./src/components/manage/Contents/ContentsIndexHeader.jsx ***!
+  \****************************************************************/
+
+/*!****************************************************************!*\
+  !*** ./src/components/manage/Contents/ContentsRenameModal.jsx ***!
+  \****************************************************************/
+
+/*!****************************************************************!*\
+  !*** ./src/components/manage/Contents/ContentsUploadModal.jsx ***!
+  \****************************************************************/
+
+/*!****************************************************************!*\
+  !*** ./src/components/manage/Widgets/SchemaWidgetFieldset.jsx ***!
+  \****************************************************************/
+
+/*!*****************************************************************!*\
+  !*** ./src/components/manage/Blocks/Listing/ListingSidebar.jsx ***!
+  \*****************************************************************/
+
+/*!*****************************************************************!*\
+  !*** ./src/components/manage/Blocks/Listing/TemplateWidget.jsx ***!
+  \*****************************************************************/
+
+/*!*****************************************************************!*\
+  !*** ./src/components/manage/Controlpanels/VersionOverview.jsx ***!
+  \*****************************************************************/
+
+/*!******************************************************************!*\
+  !*** ./src/components/manage/Blocks/Listing/DefaultTemplate.jsx ***!
+  \******************************************************************/
+
+/*!******************************************************************!*\
+  !*** ./src/components/manage/Contents/ContentsWorkflowModal.jsx ***!
+  \******************************************************************/
+
+/*!******************************************************************!*\
+  !*** ./src/components/manage/Controlpanels/ModerateComments.jsx ***!
+  \******************************************************************/
+
+/*!******************************************************************!*\
+  !*** ./src/components/manage/Multilingual/CreateTranslation.jsx ***!
+  \******************************************************************/
+
+/*!******************************************************************!*\
+  !*** ./src/components/theme/OutdatedBrowser/OutdatedBrowser.jsx ***!
+  \******************************************************************/
+
+/*!*******************************************************************!*\
+  !*** ./src/components/manage/ConditionalLink/ConditionalLink.jsx ***!
+  \*******************************************************************/
+
+/*!*******************************************************************!*\
+  !*** ./src/components/manage/Controlpanels/ContentTypeLayout.jsx ***!
+  \*******************************************************************/
+
+/*!*******************************************************************!*\
+  !*** ./src/components/manage/Controlpanels/ContentTypeSchema.jsx ***!
+  \*******************************************************************/
+
+/*!*******************************************************************!*\
+  !*** ./src/components/manage/Controlpanels/UsersControlpanel.jsx ***!
+  \*******************************************************************/
+
+/*!*******************************************************************!*\
+  !*** ./src/components/manage/Preferences/PersonalInformation.jsx ***!
+  \*******************************************************************/
+
+/*!*******************************************************************!*\
+  !*** ./src/components/manage/Preferences/PersonalPreferences.jsx ***!
+  \*******************************************************************/
+
+/*!*******************************************************************!*\
+  !*** ./src/components/theme/LanguageSelector/LanguageSelector.js ***!
+  \*******************************************************************/
+
+/*!********************************************************************!*\
+  !*** ./src/components/manage/Blocks/Listing/QuerystringWidget.jsx ***!
+  \********************************************************************/
+
+/*!********************************************************************!*\
+  !*** ./src/components/manage/Contents/ContentsPropertiesModal.jsx ***!
+  \********************************************************************/
+
+/*!********************************************************************!*\
+  !*** ./src/components/manage/Controlpanels/AddonsControlpanel.jsx ***!
+  \********************************************************************/
+
+/*!*********************************************************************!*\
+  !*** ./src/components/manage/Blocks/LeadImage/LeadImageSidebar.jsx ***!
+  \*********************************************************************/
+
+/*!*********************************************************************!*\
+  !*** ./src/components/manage/Controlpanels/ContentTypesActions.jsx ***!
+  \*********************************************************************/
+
+/*!*********************************************************************!*\
+  !*** ./src/components/manage/Controlpanels/DatabaseInformation.jsx ***!
+  \*********************************************************************/
+
+/*!*********************************************************************!*\
+  !*** ./src/components/theme/PasswordReset/RequestPasswordReset.jsx ***!
+  \*********************************************************************/
+
+/*!**********************************************************************!*\
+  !*** ./node_modules/regenerate-unicode-properties sync ^\.\/.*\.js$ ***!
+  \**********************************************************************/
+
+/*!**********************************************************************!*\
+  !*** ./src/components/manage/AnchorPlugin/components/Link/index.jsx ***!
+  \**********************************************************************/
+
+/*!**********************************************************************!*\
+  !*** ./src/components/theme/ConnectionRefused/ConnectionRefused.jsx ***!
+  \**********************************************************************/
+
+/*!***********************************************************************!*\
+  !*** ./src/components/manage/Controlpanels/UsersControlpanelUser.jsx ***!
+  \***********************************************************************/
+
+/*!*************************************************************************!*\
+  !*** ./src/components/manage/Controlpanels/UsersControlpanelGroups.jsx ***!
+  \*************************************************************************/
+
+/*!****************************************************************************!*\
+  !*** ./src/components/manage/AnchorPlugin/components/LinkButton/index.jsx ***!
+  \****************************************************************************/
+
+/*!********************************************************************************!*\
+  !*** ./src/components/theme/MultilingualRedirector/MultilingualRedirector.jsx ***!
+  \********************************************************************************/
+
+/*!**********************************************************************************!*\
+  !*** ./src/components/manage/AnchorPlugin/components/LinkButton/AddLinkForm.jsx ***!
+  \**********************************************************************************/
+
+/*!***************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js!./docs/styleguide/icons.md ***!
+  \***************************************************************************************************/
+
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/App/App.jsx ***!
+  \********************************************************************************************************/
+
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/Icon/Icon.jsx ***!
+  \**********************************************************************************************************/
+
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/Logo/Logo.jsx ***!
+  \**********************************************************************************************************/
+
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/Tags/Tags.jsx ***!
+  \**********************************************************************************************************/
+
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/View/View.jsx ***!
+  \**********************************************************************************************************/
+
+/*!***********************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/manage/Diff/Diff.jsx ***!
+  \***********************************************************************************************************/
+
+/*!***********************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/manage/Edit/Edit.jsx ***!
+  \***********************************************************************************************************/
+
+/*!***********************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/manage/Form/Form.jsx ***!
+  \***********************************************************************************************************/
+
+/*!************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/Login/Login.jsx ***!
+  \************************************************************************************************************/
+
+/*!************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/Title/Title.jsx ***!
+  \************************************************************************************************************/
+
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/manage/Toolbar/More.jsx ***!
+  \**************************************************************************************************************/
+
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/Footer/Footer.jsx ***!
+  \**************************************************************************************************************/
+
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/Header/Header.jsx ***!
+  \**************************************************************************************************************/
+
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/Logout/Logout.jsx ***!
+  \**************************************************************************************************************/
+
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/Search/Search.jsx ***!
+  \**************************************************************************************************************/
+
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/View/FileView.jsx ***!
+  \**************************************************************************************************************/
+
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/View/LinkView.jsx ***!
+  \**************************************************************************************************************/
+
+/*!***************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/manage/Delete/Delete.jsx ***!
+  \***************************************************************************************************************/
+
+/*!***************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/manage/Toolbar/Stats.jsx ***!
+  \***************************************************************************************************************/
+
+/*!***************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/manage/Toolbar/Types.jsx ***!
+  \***************************************************************************************************************/
+
+/*!***************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/View/AlbumView.jsx ***!
+  \***************************************************************************************************************/
+
+/*!***************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/View/EventView.jsx ***!
+  \***************************************************************************************************************/
+
+/*!***************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/View/ImageView.jsx ***!
+  \***************************************************************************************************************/
+
+/*!****************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/manage/Form/ModalForm.jsx ***!
+  \****************************************************************************************************************/
+
+/*!*****************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/manage/Actions/Actions.jsx ***!
+  \*****************************************************************************************************************/
+
+/*!*****************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/manage/Display/Display.jsx ***!
+  \*****************************************************************************************************************/
+
+/*!*****************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/manage/Form/InlineForm.jsx ***!
+  \*****************************************************************************************************************/
+
+/*!*****************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/manage/Toolbar/Toolbar.jsx ***!
+  \*****************************************************************************************************************/
+
+/*!*****************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/View/ListingView.jsx ***!
+  \*****************************************************************************************************************/
+
+/*!*****************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/View/SummaryView.jsx ***!
+  \*****************************************************************************************************************/
+
+/*!*****************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/View/TabularView.jsx ***!
+  \*****************************************************************************************************************/
+
+/*!******************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/Comments/Comments.jsx ***!
+  \******************************************************************************************************************/
+
+/*!******************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/NotFound/NotFound.jsx ***!
+  \******************************************************************************************************************/
+
+/*!******************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/Register/Register.jsx ***!
+  \******************************************************************************************************************/
+
+/*!******************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/Search/SearchTags.jsx ***!
+  \******************************************************************************************************************/
+
+/*!******************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/View/NewsItemView.jsx ***!
+  \******************************************************************************************************************/
+
+/*!********************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/Anontools/Anontools.jsx ***!
+  \********************************************************************************************************************/
+
+/*!********************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/View/EventDatesInfo.jsx ***!
+  \********************************************************************************************************************/
+
+/*!**********************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/Navigation/Navigation.jsx ***!
+  \**********************************************************************************************************************/
+
+/*!**********************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/Pagination/Pagination.jsx ***!
+  \**********************************************************************************************************************/
+
+/*!***********************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/manage/Toolbar/PersonalTools.jsx ***!
+  \***********************************************************************************************************************/
+
+/*!************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/Breadcrumbs/Breadcrumbs.jsx ***!
+  \************************************************************************************************************************/
+
+/*!************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/ContactForm/ContactForm.jsx ***!
+  \************************************************************************************************************************/
+
+/*!*************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/manage/Blocks/Description/Edit.jsx ***!
+  \*************************************************************************************************************************/
+
+/*!*************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/manage/Blocks/Description/View.jsx ***!
+  \*************************************************************************************************************************/
+
+/*!*************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/manage/Toolbar/StandardWrapper.jsx ***!
+  \*************************************************************************************************************************/
+
+/*!**************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/Comments/CommentEditModal.jsx ***!
+  \**************************************************************************************************************************/
+
+/*!**************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/SearchWidget/SearchWidget.jsx ***!
+  \**************************************************************************************************************************/
+
+/*!****************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??postcss!./docs/styleguide/rsg.css ***!
+  \****************************************************************************************************************************/
+
+/*!****************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/manage/Controlpanels/Controlpanel.jsx ***!
+  \****************************************************************************************************************************/
+
+/*!****************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/PasswordReset/PasswordReset.jsx ***!
+  \****************************************************************************************************************************/
+
+/*!****************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/SocialSharing/SocialSharing.jsx ***!
+  \****************************************************************************************************************************/
+
+/*!*********************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/manage/Controlpanels/UsersControlpanel.jsx ***!
+  \*********************************************************************************************************************************/
+
+/*!***********************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/theme/PasswordReset/RequestPasswordReset.jsx ***!
+  \***********************************************************************************************************************************/
+
+/*!************************************************************************************************************************************!*\
+  !*** ./node_modules/moment/locale sync [/\\](de(\.js)?|nl(\.js)?|ro(\.js)?|ja(\.js)?|pt(\.js)?|pt-br(\.js)?|es(\.js)?|it(\.js)?)$ ***!
+  \************************************************************************************************************************************/
+
+/*!**************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=App&file=.%2FApp.jsx&shouldShowDefaultExample=false!./src/components/theme/App/App.md ***!
+  \**************************************************************************************************************************************************************************/
+
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Icon&file=.%2FIcon.jsx&shouldShowDefaultExample=false!./src/components/theme/Icon/Icon.md ***!
+  \******************************************************************************************************************************************************************************/
+
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Logo&file=.%2FLogo.jsx&shouldShowDefaultExample=false!./src/components/theme/Logo/Logo.md ***!
+  \******************************************************************************************************************************************************************************/
+
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Tags&file=.%2FTags.jsx&shouldShowDefaultExample=false!./src/components/theme/Tags/Tags.md ***!
+  \******************************************************************************************************************************************************************************/
+
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=View&file=.%2FView.jsx&shouldShowDefaultExample=false!./src/components/theme/View/View.md ***!
+  \******************************************************************************************************************************************************************************/
+
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Diff&file=.%2FDiff.jsx&shouldShowDefaultExample=false!./src/components/manage/Diff/Diff.md ***!
+  \*******************************************************************************************************************************************************************************/
+
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Edit&file=.%2FEdit.jsx&shouldShowDefaultExample=false!./src/components/manage/Edit/Edit.md ***!
+  \*******************************************************************************************************************************************************************************/
+
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Form&file=.%2FForm.jsx&shouldShowDefaultExample=false!./src/components/manage/Form/Form.md ***!
+  \*******************************************************************************************************************************************************************************/
+
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Login&file=.%2FLogin.jsx&shouldShowDefaultExample=false!./src/components/theme/Login/Login.md ***!
+  \**********************************************************************************************************************************************************************************/
+
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Title&file=.%2FTitle.jsx&shouldShowDefaultExample=false!./src/components/theme/Title/Title.md ***!
+  \**********************************************************************************************************************************************************************************/
+
+/*!************************************************************************************************************************************************************************************!*\
+  !*** multi ./node_modules/semantic-ui-less/semantic.less ./theme/themes/pastanaga/extras/extras.less ./docs/styleguide/rsg.css ./node_modules/react-styleguidist/lib/client/index ***!
+  \************************************************************************************************************************************************************************************/
+
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=More&file=.%2FMore.jsx&shouldShowDefaultExample=false!./src/components/manage/Toolbar/Toolbar.md ***!
+  \*************************************************************************************************************************************************************************************/
+
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Footer&file=.%2FFooter.jsx&shouldShowDefaultExample=false!./src/components/theme/Footer/Footer.md ***!
+  \**************************************************************************************************************************************************************************************/
+
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Header&file=.%2FHeader.jsx&shouldShowDefaultExample=false!./src/components/theme/Header/Header.md ***!
+  \**************************************************************************************************************************************************************************************/
+
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=LinkView&file=.%2FLinkView.jsx&shouldShowDefaultExample=false!./src/components/theme/View/View.md ***!
+  \**************************************************************************************************************************************************************************************/
+
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Logout&file=.%2FLogout.jsx&shouldShowDefaultExample=false!./src/components/theme/Logout/Logout.md ***!
+  \**************************************************************************************************************************************************************************************/
+
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Search&file=.%2FSearch.jsx&shouldShowDefaultExample=false!./src/components/theme/Search/Search.md ***!
+  \**************************************************************************************************************************************************************************************/
+
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Delete&file=.%2FDelete.jsx&shouldShowDefaultExample=false!./src/components/manage/Delete/Delete.md ***!
+  \***************************************************************************************************************************************************************************************/
+
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Stats&file=.%2FStats.jsx&shouldShowDefaultExample=false!./src/components/manage/Toolbar/Toolbar.md ***!
+  \***************************************************************************************************************************************************************************************/
+
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Types&file=.%2FTypes.jsx&shouldShowDefaultExample=false!./src/components/manage/Toolbar/Toolbar.md ***!
+  \***************************************************************************************************************************************************************************************/
+
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=AlbumView&file=.%2FAlbumView.jsx&shouldShowDefaultExample=false!./src/components/theme/View/View.md ***!
+  \****************************************************************************************************************************************************************************************/
+
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=EventView&file=.%2FEventView.jsx&shouldShowDefaultExample=false!./src/components/theme/View/View.md ***!
+  \****************************************************************************************************************************************************************************************/
+
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=When&file=.%2FEventDatesInfo.jsx&shouldShowDefaultExample=false!./src/components/theme/View/View.md ***!
+  \****************************************************************************************************************************************************************************************/
+
+/*!******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=FileView&file=.%2FFileView.jsx&shouldShowDefaultExample=false!./src/components/theme/View/FileView.md ***!
+  \******************************************************************************************************************************************************************************************/
+
+/*!******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Option&file=.%2FDisplay.jsx&shouldShowDefaultExample=false!./src/components/manage/Display/Display.md ***!
+  \******************************************************************************************************************************************************************************************/
+
+/*!*******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Actions&file=.%2FActions.jsx&shouldShowDefaultExample=false!./src/components/manage/Actions/Actions.md ***!
+  \*******************************************************************************************************************************************************************************************/
+
+/*!*******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Toolbar&file=.%2FToolbar.jsx&shouldShowDefaultExample=false!./src/components/manage/Toolbar/Toolbar.md ***!
+  \*******************************************************************************************************************************************************************************************/
+
+/*!*********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=ImageView&file=.%2FImageView.jsx&shouldShowDefaultExample=false!./src/components/theme/View/ImageView.md ***!
+  \*********************************************************************************************************************************************************************************************/
+
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Comments&file=.%2FComments.jsx&shouldShowDefaultExample=false!./src/components/theme/Comments/Comments.md ***!
+  \**********************************************************************************************************************************************************************************************/
+
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=ModalForm&file=.%2FModalForm.jsx&shouldShowDefaultExample=false!./src/components/manage/Form/ModalForm.md ***!
+  \**********************************************************************************************************************************************************************************************/
+
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=NotFound&file=.%2FNotFound.jsx&shouldShowDefaultExample=false!./src/components/theme/NotFound/NotFound.md ***!
+  \**********************************************************************************************************************************************************************************************/
+
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Register&file=.%2FRegister.jsx&shouldShowDefaultExample=false!./src/components/theme/Register/Register.md ***!
+  \**********************************************************************************************************************************************************************************************/
+
+/*!***********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--9-1!./node_modules/postcss-loader/src??postcss!./node_modules/less-loader/dist/cjs.js??ref--9-3!./theme/themes/pastanaga/extras/extras.less ***!
+  \***********************************************************************************************************************************************************************************************/
+
+/*!*************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=InlineForm&file=.%2FInlineForm.jsx&shouldShowDefaultExample=false!./src/components/manage/Form/InlineForm.md ***!
+  \*************************************************************************************************************************************************************************************************/
+
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Anontools&file=.%2FAnontools.jsx&shouldShowDefaultExample=false!./src/components/theme/Anontools/Anontools.md ***!
+  \**************************************************************************************************************************************************************************************************/
+
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=SearchTags&file=.%2FSearchTags.jsx&shouldShowDefaultExample=false!./src/components/theme/Search/SearchTags.md ***!
+  \**************************************************************************************************************************************************************************************************/
+
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=ListingView&file=.%2FListingView.jsx&shouldShowDefaultExample=false!./src/components/theme/View/ListingView.md ***!
+  \***************************************************************************************************************************************************************************************************/
+
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=SummaryView&file=.%2FSummaryView.jsx&shouldShowDefaultExample=false!./src/components/theme/View/SummaryView.md ***!
+  \***************************************************************************************************************************************************************************************************/
+
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=TabularView&file=.%2FTabularView.jsx&shouldShowDefaultExample=false!./src/components/theme/View/TabularView.md ***!
+  \***************************************************************************************************************************************************************************************************/
+
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Edit&file=.%2FEdit.jsx&shouldShowDefaultExample=false!./src/components/manage/Blocks/Description/Description.md ***!
+  \****************************************************************************************************************************************************************************************************/
+
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=View&file=.%2FView.jsx&shouldShowDefaultExample=false!./src/components/manage/Blocks/Description/Description.md ***!
+  \****************************************************************************************************************************************************************************************************/
+
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Navigation&file=.%2FNavigation.jsx&shouldShowDefaultExample=false!./src/components/theme/Navigation/Navigation.md ***!
+  \******************************************************************************************************************************************************************************************************/
+
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=NewsItemView&file=.%2FNewsItemView.jsx&shouldShowDefaultExample=false!./src/components/theme/View/NewsItemView.md ***!
+  \******************************************************************************************************************************************************************************************************/
+
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Pagination&file=.%2FPagination.jsx&shouldShowDefaultExample=false!./src/components/theme/Pagination/Pagination.md ***!
+  \******************************************************************************************************************************************************************************************************/
+
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Breadcrumbs&file=.%2FBreadcrumbs.jsx&shouldShowDefaultExample=false!./src/components/theme/Breadcrumbs/Breadcrumbs.md ***!
+  \**********************************************************************************************************************************************************************************************************/
+
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=ContactForm&file=.%2FContactForm.jsx&shouldShowDefaultExample=false!./src/components/theme/ContactForm/ContactForm.md ***!
+  \**********************************************************************************************************************************************************************************************************/
+
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=StandardWrapper&file=.%2FStandardWrapper.jsx&shouldShowDefaultExample=false!./src/components/manage/Toolbar/Toolbar.md ***!
+  \***********************************************************************************************************************************************************************************************************/
+
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=PersonalTools&file=.%2FPersonalTools.jsx&shouldShowDefaultExample=false!./src/components/manage/Toolbar/PersonalTools.md ***!
+  \*************************************************************************************************************************************************************************************************************/
+
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=SearchWidget&file=.%2FSearchWidget.jsx&shouldShowDefaultExample=false!./src/components/theme/SearchWidget/SearchWidget.md ***!
+  \**************************************************************************************************************************************************************************************************************/
+
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Controlpanel&file=.%2FControlpanel.jsx&shouldShowDefaultExample=false!./src/components/manage/Controlpanels/Controlpanel.md ***!
+  \****************************************************************************************************************************************************************************************************************/
+
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=PasswordReset&file=.%2FPasswordReset.jsx&shouldShowDefaultExample=false!./src/components/theme/PasswordReset/PasswordReset.md ***!
+  \******************************************************************************************************************************************************************************************************************/
+
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=SocialSharing&file=.%2FSocialSharing.jsx&shouldShowDefaultExample=false!./src/components/theme/SocialSharing/SocialSharing.md ***!
+  \******************************************************************************************************************************************************************************************************************/
+
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=CommentEditModal&file=.%2FCommentEditModal.jsx&shouldShowDefaultExample=false!./src/components/theme/Comments/CommentEditModal.md ***!
+  \**********************************************************************************************************************************************************************************************************************/
+
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=UsersControlpanel&file=.%2FUsersControlpanel.jsx&shouldShowDefaultExample=false!./src/components/manage/Controlpanels/UsersControlpanel.md ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=RequestPasswordReset&file=.%2FRequestPasswordReset.jsx&shouldShowDefaultExample=false!./src/components/theme/PasswordReset/RequestPasswordReset.md ***!
+  \***************************************************************************************************************************************************************************************************************************************/

@@ -1,0 +1,5 @@
+/*! exports provided: default, defaultProps, makeCreatableSelect */
+
+/*!******************************************************************************!*\
+  !*** ./node_modules/react-select/creatable/dist/react-select.browser.esm.js ***!
+  \******************************************************************************/
