@@ -1,0 +1,1529 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+    
+    
+      
+        <title>Edit components - Volto Developer Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bc7e593a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab28b872.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#009485">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700%7CSource+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Poppins",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.oct2020.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/pygments.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="teal" data-md-color-accent="red">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#blocks-edit-components" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Volto Developer Documentation" class="md-header-nav__button md-logo" aria-label="Volto Developer Documentation">
+      
+  <img src="../../images/volto-h-transparent.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Volto Developer Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Edit components
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/plone/volto/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Volto Developer Documentation" class="md-nav__button md-logo" aria-label="Volto Developer Documentation">
+      
+  <img src="../../images/volto-h-transparent.svg" alt="logo">
+
+    </a>
+    Volto Developer Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/plone/volto/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Getting Started
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/install/" class="md-nav__link">
+      Bootstrap Volto
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/roadmap/" class="md-nav__link">
+      Developer roadmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/others/" class="md-nav__link">
+      Learning resources
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../design-principles/" class="md-nav__link">
+      Design principles
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Configuration
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Configuration" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/how-to/" class="md-nav__link">
+      What is configurable?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/settings-reference/" class="md-nav__link">
+      Settings reference guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/internalproxy/" class="md-nav__link">
+      Internal proxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/richeditor-settings/" class="md-nav__link">
+      Richeditor settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/multilingual/" class="md-nav__link">
+      Multilingual
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Theming & Semantic UI
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Theming & Semantic UI" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Theming & Semantic UI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../theming/about-semantic/" class="md-nav__link">
+      About Semantic UI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../theming/semanticui-theming/" class="md-nav__link">
+      Semantic UI Theming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../theming/theming-engine/" class="md-nav__link">
+      Theming Engine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../theming/theming-strategy/" class="md-nav__link">
+      Theming strategy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../theming/custom-styling/" class="md-nav__link">
+      Custom styling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../theming/integrate-third-party/" class="md-nav__link">
+      Integrate third party
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Development recipes
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Development recipes" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Development recipes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/creating-project/" class="md-nav__link">
+      Creating a project
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/folder-structure/" class="md-nav__link">
+      Folder structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/customizing-components/" class="md-nav__link">
+      Customizing components
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/customizing-views/" class="md-nav__link">
+      Customizing views
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/creating-views/" class="md-nav__link">
+      Creating new views
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/i18n/" class="md-nav__link">
+      Internationalization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/express/" class="md-nav__link">
+      Express middleware
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/lazyload/" class="md-nav__link">
+      Lazy loading and code splitting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/overridei18n/" class="md-nav__link">
+      Overriding i18n messages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/appextras/" class="md-nav__link">
+      App component insertion point
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/widget/" class="md-nav__link">
+      Create a widget
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/action-reducers.md" class="md-nav__link">
+      Write Redux action/reducers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/fetch-data/" class="md-nav__link">
+      Fetch data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Blocks
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Blocks" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        Blocks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../anatomy/" class="md-nav__link">
+      Anatomy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../settings/" class="md-nav__link">
+      Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Edit components
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Edit components
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sidebar" class="md-nav__link">
+    Sidebar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automated-block-editing-forms" class="md-nav__link">
+    Automated block editing forms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object-browser" class="md-nav__link">
+    Object Browser
+  </a>
+  
+    <nav class="md-nav" aria-label="Object Browser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openobjectbrowser-handler-api" class="md-nav__link">
+    openObjectBrowser handler API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objectbrowserwidget" class="md-nav__link">
+    ObjectBrowserWidget
+  </a>
+  
+    <nav class="md-nav" aria-label="ObjectBrowserWidget">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#propdataname-vs-dataname" class="md-nav__link">
+    PropDataName vs dataName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objectbrowserwidgetmode" class="md-nav__link">
+    ObjectBrowserWidgetMode()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selectable-types" class="md-nav__link">
+    Selectable types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximumselectionsize" class="md-nav__link">
+    MaximumSelectionSize
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Addons
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Addons" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        Addons
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../addons/" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../addons/best-practices/" class="md-nav__link">
+      Best practices
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../backend/" class="md-nav__link">
+      Backend integration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Deploying
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Deploying" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon"></span>
+        Deploying
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../deploying/simple/" class="md-nav__link">
+      Simple deployment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../deploying/pm2/" class="md-nav__link">
+      Using PM2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../deploying/apache/" class="md-nav__link">
+      Using apache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../deploying/sentry/" class="md-nav__link">
+      Using sentry
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../upgrade-guide/" class="md-nav__link">
+      Upgrade Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Developer Guidelines
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Developer Guidelines" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        <span class="md-nav__icon md-icon"></span>
+        Developer Guidelines
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/accessibility-guidelines/" class="md-nav__link">
+      Accessibility
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/react/" class="md-nav__link">
+      React
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/babel/" class="md-nav__link">
+      Babel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/redux/" class="md-nav__link">
+      Redux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/routing/" class="md-nav__link">
+      Routing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/linting/" class="md-nav__link">
+      Linting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/language-features/" class="md-nav__link">
+      Language features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/acceptance-tests/" class="md-nav__link">
+      Acceptance tests
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Contributing
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Contributing" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        <span class="md-nav__icon md-icon"></span>
+        Contributing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contributing/guidelines/" class="md-nav__link">
+      Guidelines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sidebar" class="md-nav__link">
+    Sidebar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automated-block-editing-forms" class="md-nav__link">
+    Automated block editing forms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object-browser" class="md-nav__link">
+    Object Browser
+  </a>
+  
+    <nav class="md-nav" aria-label="Object Browser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openobjectbrowser-handler-api" class="md-nav__link">
+    openObjectBrowser handler API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objectbrowserwidget" class="md-nav__link">
+    ObjectBrowserWidget
+  </a>
+  
+    <nav class="md-nav" aria-label="ObjectBrowserWidget">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#propdataname-vs-dataname" class="md-nav__link">
+    PropDataName vs dataName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objectbrowserwidgetmode" class="md-nav__link">
+    ObjectBrowserWidgetMode()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selectable-types" class="md-nav__link">
+    Selectable types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximumselectionsize" class="md-nav__link">
+    MaximumSelectionSize
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/plone/volto/edit/master/docs/blocks/editcomponent.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="blocks-edit-components">Blocks - Edit components<a class="headerlink" href="#blocks-edit-components" title="Permanent link">#</a></h1>
+<p>The edit component part of a block anatomy is specially different to the view component because they have to support the UX for editing the block.
+This UX can be very complex depending on the kind of block and the feature that it is trying to provide.
+The project requirements will tell how far you should go with the UX story of each tile, and how complex it will become.
+You can use all the props that the edit component is receiving to model the UX for the block and how it will render.</p>
+<p>See the <a href="../anatomy/#block-edit-component-props">complete list of props</a>.</p>
+<p>We have several UI/UX artifacts in order to model our block edit component UX.
+The sidebar and the object browser are the main ones.</p>
+<h2 id="sidebar">Sidebar<a class="headerlink" href="#sidebar" title="Permanent link">#</a></h2>
+<p>We can use the new sidebar when building our blocks' edit components.
+The sidebar is a new UI asset that is available in Volto 4.
+You need to instantiate it this way:</p>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">SidebarPortal</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@plone/volto/components&#39;</span><span class="p">;</span>
+
+<span class="p">[...]</span>
+
+<span class="p">&lt;</span><span class="nt">SidebarPortal</span> <span class="na">selected</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">selected</span><span class="p">}&gt;</span>
+  <span class="p">...</span>
+<span class="p">&lt;/</span><span class="nt">SidebarPortal</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Everything that's inside the <code>SidebarPortal</code> component will be rendered in the sidebar.</p>
+<h2 id="automated-block-editing-forms">Automated block editing forms<a class="headerlink" href="#automated-block-editing-forms" title="Permanent link">#</a></h2>
+<p>To simplify the task of defining the edit component for a block, the <code>InlineForm</code> component can be used. The block edit component needs to be described by a schema that matches the format used to serialize the content type definitions. The widgets that will be used in rendering the form follow the same algorithm that is used for the regular metadata fields for the content types. As an example of schema, it could look like this:</p>
+<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">IframeSchema</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Embed external content&#39;</span><span class="p">,</span>
+
+  <span class="nx">fieldsets</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;default&#39;</span><span class="p">,</span>
+      <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Default&#39;</span><span class="p">,</span>
+      <span class="nx">fields</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s1">&#39;url&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;align&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;privacy_statement&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;privacy_cookie_key&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;enabled&#39;</span><span class="p">,</span>
+      <span class="p">],</span>
+    <span class="p">},</span>
+  <span class="p">],</span>
+
+  <span class="nx">properties</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">url</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Embed URL&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nx">privacy_statement</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Privacy statement&#39;</span><span class="p">,</span>
+      <span class="nx">description</span><span class="o">:</span> <span class="s1">&#39;Short notification text&#39;</span><span class="p">,</span>
+      <span class="nx">widget</span><span class="o">:</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nx">privacy_cookie_key</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Privacy cookie key&#39;</span><span class="p">,</span>
+      <span class="nx">description</span><span class="o">:</span> <span class="s1">&#39;Identifies similar external content&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nx">enabled</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Use privacy screen?&#39;</span><span class="p">,</span>
+      <span class="nx">description</span><span class="o">:</span> <span class="s1">&#39;Enable/disable the privacy protection&#39;</span><span class="p">,</span>
+      <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;boolean&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+
+  <span class="nx">required</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">],</span>
+<span class="p">};</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">IframeSchema</span><span class="p">;</span>
+</code></pre></div>
+<p>To render this form and make it available to the edit component:</p>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">schema</span> <span class="nx">from</span> <span class="s1">&#39;./schema&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">InlineForm</span> <span class="nx">from</span> <span class="s1">&#39;@plone/volto/components/manage/Form/InlineForm&#39;</span><span class="p">;</span>
+
+<span class="p">&lt;</span><span class="nt">SidebarPortal</span> <span class="na">selected</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">selected</span><span class="p">}&gt;</span>
+  <span class="p">&lt;</span><span class="nt">InlineForm</span>
+    <span class="na">schema</span><span class="o">=</span><span class="p">{</span><span class="nx">schema</span><span class="p">}</span>
+    <span class="na">title</span><span class="o">=</span><span class="p">{</span><span class="nx">schema</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span>
+    <span class="na">onChangeField</span><span class="o">=</span><span class="p">{(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">onChangeBlock</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">block</span><span class="p">,</span> <span class="p">{</span>
+        <span class="p">...</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">,</span>
+        <span class="p">[</span><span class="nx">id</span><span class="p">]</span><span class="o">:</span> <span class="nx">value</span><span class="p">,</span>
+      <span class="p">});</span>
+    <span class="p">}}</span>
+    <span class="na">formData</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">}</span>
+  <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">SidebarPortal</span><span class="p">&gt;;</span>
+</code></pre></div>
+<h2 id="object-browser">Object Browser<a class="headerlink" href="#object-browser" title="Permanent link">#</a></h2>
+<p>Volto 4 has a new object browser component that allows you to select an existing content object from the site.
+It has the form of an HOC (High Order Component), so you have to wrap the component you want to be able to call the object browser from with it, like this:</p>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">withObjectBrowser</span> <span class="nx">from</span> <span class="s1">&#39;@plone/volto/components/manage/Sidebar/ObjectBrowser&#39;</span><span class="p">;</span>
+
+<span class="p">[...]</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">withObjectBrowser</span><span class="p">(</span><span class="nx">MyComponent</span><span class="p">)</span>
+</code></pre></div>
+<p>The HOC component <code>withObjectBrowser</code> wraps your component by making available this props:</p>
+<ul>
+<li>isObjectBrowserOpen - (Bool) tells if the browser is currently open</li>
+<li>openObjectBrowser - handler for opening the browser</li>
+<li>closeObjectBrowser - handler for closing the browser</li>
+</ul>
+<p>By default, it's enabled for all the component tree under the Blocks Editor, so it's available already for all the blocks in edit mode.
+However, if you need to instantiate it somewhere else, you can do it anyways by wrapping your component with it.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>The default image block in Volto features both the Sidebar and the object browser, take a look at its source code in case you need more context on how they work.</p>
+<h3 id="openobjectbrowser-handler-api">openObjectBrowser handler API<a class="headerlink" href="#openobjectbrowser-handler-api" title="Permanent link">#</a></h3>
+<p>If you want to open an <code>ObjectBrowser</code> from your Block, you need to call the <code>openObjectBrowser</code> function you'll find in the props of your block component.
+This function has this signature:</p>
+<div class="highlight"><pre><span></span><code>@param {Object} object ObjectBrowser configuration.
+@param {string} object.mode Quick mode, defaults to `image`.
+@param {string} object.dataName Name of the block data property to write the selected item.
+@param {string} object.onSelectItem Function that will be called on item selection.
+</code></pre></div>
+<p>These are some examples on how to use it:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Opens the browser in the `image` mode by default if no config object specified, so it saves the selection in the `url` data property.</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">openObjectBrowser</span><span class="p">();</span>
+
+<span class="c1">// Opens the browser in the `link` mode, so it saves the selection in the `href` data property.</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">openObjectBrowser</span><span class="p">({</span> <span class="nx">mode</span><span class="o">:</span> <span class="s1">&#39;link&#39;</span> <span class="p">});</span>
+
+<span class="c1">// Opens the browser defining which data property should save the selection using `dataName`</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">openObjectBrowser</span><span class="p">({</span>
+  <span class="nx">dataName</span><span class="o">:</span> <span class="s1">&#39;myfancydatafield&#39;</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="c1">// Opens the browser defining the function that should be used to save the selection using `onSelectItem`</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">openObjectBrowser</span><span class="p">({</span>
+  <span class="nx">onSelectItem</span><span class="o">:</span> <span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">=&gt;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">onChangeBlock</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">block</span><span class="p">,</span> <span class="p">{</span>
+      <span class="p">...</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">,</span>
+      <span class="nx">myfancydatafield</span><span class="o">:</span> <span class="nx">url</span><span class="p">,</span>
+    <span class="p">}),</span>
+<span class="p">});</span>
+</code></pre></div>
+<h3 id="objectbrowserwidget">ObjectBrowserWidget<a class="headerlink" href="#objectbrowserwidget" title="Permanent link">#</a></h3>
+<p>This widget shows an objectBrowser to find content/contents on site.</p>
+<p>It is the default widget for vocabulary fields that uses plone.app.vocabularies.Catalog.</p>
+<p>It works in 3 different mode:</p>
+<ul>
+<li><strong>image</strong>: The field value is an object.
+  The path of selected item is saved in 'url' property of value object. (fieldName: {url:''})</li>
+<li><strong>link</strong>: The field value is an object.
+  The path of selected item is saved in 'href' property of value object. (fieldName: {href:''})</li>
+<li><strong>multiple</strong>: The field value is an array of objects.</li>
+</ul>
+<h4 id="propdataname-vs-dataname">PropDataName vs dataName<a class="headerlink" href="#propdataname-vs-dataname" title="Permanent link">#</a></h4>
+<ul>
+<li><strong>dataName</strong> is the prop inside <em>data</em> object, used for <em>link</em> and <em>image</em> mode.</li>
+<li><strong>PropDataName</strong> is the name of field wich value is <em>data</em>. It's used for <em>multiple</em> mode.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">content</span><span class="o">:</span><span class="p">{</span> <span class="s1">&#39;@id&#39;</span><span class="o">:</span> <span class="s1">&#39;page-1&#39;</span><span class="p">,</span> <span class="nx">related_pages</span><span class="o">:</span><span class="p">[],</span> <span class="nx">image</span><span class="o">:</span><span class="p">{</span><span class="nx">url</span><span class="o">:</span><span class="s2">&quot;&quot;</span><span class="p">},</span> <span class="nx">link</span><span class="o">:</span><span class="p">{</span><span class="nx">href</span><span class="o">:</span><span class="s2">&quot;&quot;</span><span class="p">}</span> <span class="p">}</span>
+</code></pre></div>
+<p>if we use object browser widget for fields:</p>
+<ul>
+<li><strong>related_pages</strong>: propDataName is <em>related_pages</em> and dataName is null,</li>
+<li><strong>image</strong>: dataName is <em>url</em> and propDataName is null</li>
+<li><strong>link</strong>: dataName is <em>href</em> and propDataName is null</li>
+</ul>
+<h4 id="objectbrowserwidgetmode">ObjectBrowserWidgetMode()<a class="headerlink" href="#objectbrowserwidgetmode" title="Permanent link">#</a></h4>
+<p>Returns the component widget with <em>mode</em> passed as argument.</p>
+<p>The default mode for ObjectBrowserWidget is multiple. If you would like to use this widget with link or image mode as widget field for a specific field id (for example), you could specify in in config.js as:</p>
+<div class="highlight"><pre><span></span><code><span class="kr">export</span> <span class="kr">const</span> <span class="nx">widgets</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">widgetMapping</span><span class="o">:</span> <span class="p">{</span>
+    <span class="p">...</span><span class="nx">widgetMapping</span><span class="p">,</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="p">{</span>
+      <span class="p">...</span><span class="nx">widgetMapping</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+      <span class="nx">my_image_field</span><span class="o">:</span> <span class="nx">ObjectBrowserWidgetMode</span><span class="p">(</span><span class="s1">&#39;image&#39;</span><span class="p">),</span>
+      <span class="nx">my_link_field</span><span class="o">:</span> <span class="nx">ObjectBrowserWidgetMode</span><span class="p">(</span><span class="s1">&#39;link&#39;</span><span class="p">),</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+  <span class="k">default</span><span class="o">:</span> <span class="nx">defaultWidget</span><span class="p">,</span>
+<span class="p">};</span>
+</code></pre></div>
+<h4 id="selectable-types">Selectable types<a class="headerlink" href="#selectable-types" title="Permanent link">#</a></h4>
+<p>If <strong>selectableTypes</strong> is set in <em>widgetOptions.pattern_options</em>, widget allows to select only items that matches types defined in <em>widgetOptions.pattern_options.selectableTypes</em>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ObjectBrowserWidget</span> <span class="na">...</span> <span class="na">widgetOptions</span><span class="o">=</span><span class="p">{{</span><span class="nx">pattern_options</span><span class="o">:</span><span class="p">{</span><span class="nx">selectableTypes</span><span class="o">:</span><span class="p">[</span><span class="s1">&#39;News Item&#39;</span><span class="p">,</span><span class="s1">&#39;Event&#39;</span><span class="p">]}}}&gt;</span>
+</code></pre></div>
+<p>You can also set the <em>selectableTypes</em> from plone when declaring a field for contenttype:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">form</span><span class="p">.</span><span class="nx">widget</span><span class="p">(</span>
+  <span class="s1">&#39;a_cura_di&#39;</span><span class="p">,</span>
+  <span class="nx">RelatedItemsFieldWidget</span><span class="p">,</span>
+  <span class="p">(</span><span class="nx">vocabulary</span> <span class="o">=</span> <span class="s1">&#39;plone.app.vocabularies.Catalog&#39;</span><span class="p">),</span>
+  <span class="p">(</span><span class="nx">pattern_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">maximumSelectionSize</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
+    <span class="nx">selectableTypes</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;News Item&#39;</span><span class="p">,</span> <span class="s1">&#39;Event&#39;</span><span class="p">],</span>
+  <span class="p">}),</span>
+<span class="p">);</span>
+</code></pre></div>
+<h4 id="maximumselectionsize">MaximumSelectionSize<a class="headerlink" href="#maximumselectionsize" title="Permanent link">#</a></h4>
+<p>If <strong>maximumSelectionSize</strong> is set in <em>widgetOptions.pattern_options</em>, widget allows to select at most the <strong>maximumSelectionSize</strong> number of items defined in <em>widgetOptions.pattern_options.maximumSelectionSize</em>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ObjectBrowserWidget</span> <span class="na">...</span> <span class="na">widgetOptions</span><span class="o">=</span><span class="p">{{</span><span class="nx">pattern_options</span><span class="o">:</span><span class="p">{</span><span class="nx">maximumSelectionSize</span><span class="o">:</span><span class="mf">2</span><span class="p">}}}&gt;</span>
+</code></pre></div>
+<p>You can also set the <em>maximumSelectionSize</em> from plone when declaring a field for contenttype:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">form</span><span class="p">.</span><span class="nx">widget</span><span class="p">(</span>
+  <span class="s1">&#39;a_cura_di&#39;</span><span class="p">,</span>
+  <span class="nx">RelatedItemsFieldWidget</span><span class="p">,</span>
+  <span class="p">(</span><span class="nx">vocabulary</span> <span class="o">=</span> <span class="s1">&#39;plone.app.vocabularies.Catalog&#39;</span><span class="p">),</span>
+  <span class="p">(</span><span class="nx">pattern_options</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">maximumSelectionSize</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span> <span class="nx">selectableTypes</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Event&#39;</span><span class="p">]</span> <span class="p">}),</span>
+<span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nx">form</span><span class="p">.</span><span class="nx">widget</span><span class="p">(</span>
+  <span class="s1">&#39;notizie_correlate&#39;</span><span class="p">,</span>
+  <span class="nx">RelatedItemsFieldWidget</span><span class="p">,</span>
+  <span class="p">(</span><span class="nx">vocabulary</span> <span class="o">=</span> <span class="s1">&#39;plone.app.vocabularies.Catalog&#39;</span><span class="p">),</span>
+  <span class="p">(</span><span class="nx">pattern_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">maximumSelectionSize</span><span class="o">:</span> <span class="mf">10</span><span class="p">,</span>
+    <span class="nx">selectableTypes</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;News Item&#39;</span><span class="p">],</span>
+  <span class="p">}),</span>
+<span class="p">);</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../settings/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Settings
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../addons/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Introduction
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Made with ❤️ by the Plone Community - All code owned by the Plone Foundation
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.6a3d08fc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

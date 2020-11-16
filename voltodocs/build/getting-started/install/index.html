@@ -1,0 +1,1461 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+    
+    
+      
+        <title>Bootstrap Volto - Volto Developer Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bc7e593a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab28b872.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#009485">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700%7CSource+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Poppins",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.oct2020.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/pygments.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="teal" data-md-color-accent="red">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getting-started" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Volto Developer Documentation" class="md-header-nav__button md-logo" aria-label="Volto Developer Documentation">
+      
+  <img src="../../images/volto-h-transparent.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Volto Developer Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Bootstrap Volto
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/plone/volto/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Volto Developer Documentation" class="md-nav__button md-logo" aria-label="Volto Developer Documentation">
+      
+  <img src="../../images/volto-h-transparent.svg" alt="logo">
+
+    </a>
+    Volto Developer Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/plone/volto/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Getting Started
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Bootstrap Volto
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Bootstrap Volto
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-volto" class="md-nav__link">
+    Installing Volto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-nvm-nodejs-version-manager" class="md-nav__link">
+    Install nvm (NodeJS version manager)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yarn-nodejs-package-manager" class="md-nav__link">
+    Yarn (NodeJS package manager)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-for-mac" class="md-nav__link">
+    Docker for Mac
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-plone-ready-for-volto" class="md-nav__link">
+    Get Plone ready for Volto
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Plone ready for Volto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-a-volto-ready-plone-docker-container" class="md-nav__link">
+    Run a Volto ready Plone Docker container
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-volto" class="md-nav__link">
+    Install Volto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-the-production-bundle" class="md-nav__link">
+    Build the production bundle
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../roadmap/" class="md-nav__link">
+      Developer roadmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../others/" class="md-nav__link">
+      Learning resources
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../design-principles/" class="md-nav__link">
+      Design principles
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Configuration
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Configuration" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/how-to/" class="md-nav__link">
+      What is configurable?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/settings-reference/" class="md-nav__link">
+      Settings reference guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/internalproxy/" class="md-nav__link">
+      Internal proxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/richeditor-settings/" class="md-nav__link">
+      Richeditor settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/multilingual/" class="md-nav__link">
+      Multilingual
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Theming & Semantic UI
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Theming & Semantic UI" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Theming & Semantic UI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../theming/about-semantic/" class="md-nav__link">
+      About Semantic UI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../theming/semanticui-theming/" class="md-nav__link">
+      Semantic UI Theming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../theming/theming-engine/" class="md-nav__link">
+      Theming Engine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../theming/theming-strategy/" class="md-nav__link">
+      Theming strategy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../theming/custom-styling/" class="md-nav__link">
+      Custom styling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../theming/integrate-third-party/" class="md-nav__link">
+      Integrate third party
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Development recipes
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Development recipes" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Development recipes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/creating-project/" class="md-nav__link">
+      Creating a project
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/folder-structure/" class="md-nav__link">
+      Folder structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/customizing-components/" class="md-nav__link">
+      Customizing components
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/customizing-views/" class="md-nav__link">
+      Customizing views
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/creating-views/" class="md-nav__link">
+      Creating new views
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/i18n/" class="md-nav__link">
+      Internationalization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/express/" class="md-nav__link">
+      Express middleware
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/lazyload/" class="md-nav__link">
+      Lazy loading and code splitting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/overridei18n/" class="md-nav__link">
+      Overriding i18n messages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/appextras/" class="md-nav__link">
+      App component insertion point
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/widget/" class="md-nav__link">
+      Create a widget
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/action-reducers.md" class="md-nav__link">
+      Write Redux action/reducers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/fetch-data/" class="md-nav__link">
+      Fetch data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Blocks
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Blocks" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        Blocks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blocks/introduction/" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blocks/anatomy/" class="md-nav__link">
+      Anatomy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blocks/settings/" class="md-nav__link">
+      Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blocks/editcomponent/" class="md-nav__link">
+      Edit components
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Addons
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Addons" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        Addons
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../addons/" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../addons/best-practices/" class="md-nav__link">
+      Best practices
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../backend/" class="md-nav__link">
+      Backend integration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Deploying
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Deploying" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon"></span>
+        Deploying
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../deploying/simple/" class="md-nav__link">
+      Simple deployment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../deploying/pm2/" class="md-nav__link">
+      Using PM2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../deploying/apache/" class="md-nav__link">
+      Using apache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../deploying/sentry/" class="md-nav__link">
+      Using sentry
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../upgrade-guide/" class="md-nav__link">
+      Upgrade Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Developer Guidelines
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Developer Guidelines" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        <span class="md-nav__icon md-icon"></span>
+        Developer Guidelines
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/accessibility-guidelines/" class="md-nav__link">
+      Accessibility
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/react/" class="md-nav__link">
+      React
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/babel/" class="md-nav__link">
+      Babel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/redux/" class="md-nav__link">
+      Redux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/routing/" class="md-nav__link">
+      Routing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/linting/" class="md-nav__link">
+      Linting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/language-features/" class="md-nav__link">
+      Language features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/acceptance-tests/" class="md-nav__link">
+      Acceptance tests
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Contributing
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Contributing" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        <span class="md-nav__icon md-icon"></span>
+        Contributing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contributing/guidelines/" class="md-nav__link">
+      Guidelines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-volto" class="md-nav__link">
+    Installing Volto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-nvm-nodejs-version-manager" class="md-nav__link">
+    Install nvm (NodeJS version manager)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yarn-nodejs-package-manager" class="md-nav__link">
+    Yarn (NodeJS package manager)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-for-mac" class="md-nav__link">
+    Docker for Mac
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-plone-ready-for-volto" class="md-nav__link">
+    Get Plone ready for Volto
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Plone ready for Volto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-a-volto-ready-plone-docker-container" class="md-nav__link">
+    Run a Volto ready Plone Docker container
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-volto" class="md-nav__link">
+    Install Volto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-the-production-bundle" class="md-nav__link">
+    Build the production bundle
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/plone/volto/edit/master/docs/getting-started/install.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">#</a></h1>
+<h2 id="installing-volto">Installing Volto<a class="headerlink" href="#installing-volto" title="Permanent link">#</a></h2>
+<p>Volto can be installed in any operating system assuming that this requirements
+are met:</p>
+<ul>
+<li><a href="https://nodejs.org/">Node.js LTS (14.x)</a></li>
+<li><a href="https://python.org/">Python 3.7.x / 2.7.x</a> or</li>
+<li><a href="https://www.docker.com/get-started">Docker</a> (if using the Plone/Guillotina
+  docker images)</li>
+</ul>
+<p>Depending on the OS that you are using some of the following might change, they
+are assuming a MacOS/Linux machine:</p>
+<h2 id="install-nvm-nodejs-version-manager">Install nvm (NodeJS version manager)<a class="headerlink" href="#install-nvm-nodejs-version-manager" title="Permanent link">#</a></h2>
+<p>If you have a working nodejs development setup on your machine, this step is
+not required. But it's a good idea to integrate nvm for development, as it
+provides easy access to any Nodejs released version.</p>
+<ol>
+<li>
+<p>Open a terminal console and type:
+<div class="highlight"><pre><span></span><code>touch ~/.bash_profile
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh <span class="p">|</span> bash
+</code></pre></div></p>
+</li>
+<li>
+<p>Close the terminal and open a new one or execute:
+<div class="highlight"><pre><span></span><code>source ~/.bash_profile
+</code></pre></div></p>
+</li>
+<li>
+<p>Test it:
+<div class="highlight"><pre><span></span><code>nvm version
+</code></pre></div></p>
+</li>
+<li>
+<p>Install any active LTS version of NodeJS (<a href="https://nodejs.org/en/about/releases/">https://nodejs.org/en/about/releases/</a>):
+<div class="highlight"><pre><span></span><code>nvm install 12.16.1
+nvm use 12.16.1
+</code></pre></div></p>
+</li>
+<li>
+<p>Test NodeJS:
+<div class="highlight"><pre><span></span><code>node -v
+</code></pre></div></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you're using the fish shell, you can use <a href="https://github.com/jorgebucaran/nvm.fish">nvm.fish</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Volto supports all currently active NodeJS LTS versions based on <a href="https://nodejs.org/en/about/releases/">NodeJS
+Releases page</a>. On 2021-04-30 Volto
+will not support Node 10 as it will reach its end of life.</p>
+</div>
+<h2 id="yarn-nodejs-package-manager">Yarn (NodeJS package manager)<a class="headerlink" href="#yarn-nodejs-package-manager" title="Permanent link">#</a></h2>
+<p>Install the Yarn Classic version (not the 2.x one!), of the popular node package manager.</p>
+<ol>
+<li>
+<p>Open a terminal and type:
+<div class="highlight"><pre><span></span><code>curl -o- -L https://yarnpkg.com/install.sh | bash
+</code></pre></div></p>
+</li>
+<li>
+<p>Test it, running:
+<div class="highlight"><pre><span></span><code>yarn -v
+</code></pre></div></p>
+</li>
+</ol>
+<div class="admonition tip alternative methods">
+<p class="admonition-title">Tip</p>
+<p>You can install <code>yarn</code> using several approaches too, depending on the
+platform you are on. Take a look at the original <code>yarn</code>
+<a href="https://classic.yarnpkg.com/lang/en/">documentation</a> for a list of them.</p>
+</div>
+<h2 id="docker-for-mac">Docker for Mac<a class="headerlink" href="#docker-for-mac" title="Permanent link">#</a></h2>
+<p>In order to run the API backend, in a quick an easy and hassle way, it's recommended to start running it in a container.</p>
+<p>Here are the detailed instructions:</p>
+<div class="codehilite"><pre><span></span><code>https://hub.docker.com/editions/community/docker-ce-desktop-mac
+</code></pre></div>
+
+<ol>
+<li>
+<p>Download the .dmg from:</p>
+<p><a href="https://download.docker.com/mac/stable/Docker.dmg">https://download.docker.com/mac/stable/Docker.dmg</a></p>
+</li>
+<li>
+<p>Install the package as any other Mac software, if required, follow
+   instructions from:</p>
+<p><a href="https://docs.docker.com/docker-for-mac/install/">https://docs.docker.com/docker-for-mac/install/</a></p>
+</li>
+<li>
+<p>Check that docker is installed correctly, open a new terminal and type:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>docker ps
+</code></pre></div>
+<p>should not throw an error and show the current running containers.</p>
+<h2 id="get-plone-ready-for-volto">Get Plone ready for Volto<a class="headerlink" href="#get-plone-ready-for-volto" title="Permanent link">#</a></h2>
+<p>In order to fully support all Volto features, Plone needs to be prepared for Volto. This
+involves configuration, add-ons installation and some patches to the core.</p>
+<p>There's a package published called <code>kitconcept.volto</code> that does all the heavy lifting
+for you and it's ready to use in your own projects.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>However, this package is oppinionated and might not fit your needs, so if you
+want to use your own integration package instead, just take a look to the features
+it provides and extract the ones you need for your project and tailor your own
+integration package.</p>
+<div class="codehilite"><pre><span></span><code>https://github.com/kitconcept/kitconcept.volto
+</code></pre></div>
+
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>From Volto 5.1 and above, Volto features an internal proxy to your API server. So
+you don't have to deal with CORS. It's enabled by default, pointing to the server
+specified in the <code>devProxyToApiPath</code> Volto settings (<a href="http://localhost:8080/Plone">http://localhost:8080/Plone</a>).
+See <a href="../../configuration/internalproxy/">here</a> for more details.</p>
+</div>
+<h3 id="run-a-volto-ready-plone-docker-container">Run a Volto ready Plone Docker container<a class="headerlink" href="#run-a-volto-ready-plone-docker-container" title="Permanent link">#</a></h3>
+<p>You can run an standard Plone docker container with the proper configuration using <code>kitconcept.volto</code> right away by issuing:</p>
+<div class="highlight"><pre><span></span><code>docker run -it --rm --name<span class="o">=</span>plone <span class="se">\</span>
+  -p <span class="m">8080</span>:8080 -e <span class="nv">SITE</span><span class="o">=</span>Plone -e <span class="nv">ADDONS</span><span class="o">=</span><span class="s2">&quot;kitconcept.volto&quot;</span> <span class="se">\</span>
+  -e <span class="nv">ZCML</span><span class="o">=</span><span class="s2">&quot;kitconcept.volto.cors&quot;</span> <span class="se">\</span>
+  -e <span class="nv">PROFILES</span><span class="o">=</span><span class="s2">&quot;kitconcept.volto:default-homepage&quot;</span> <span class="se">\</span>
+  plone
+</code></pre></div>
+<h2 id="install-volto">Install Volto<a class="headerlink" href="#install-volto" title="Permanent link">#</a></h2>
+<p>Use the <code>create-volto-app</code> helper utility.</p>
+<ol>
+<li>
+<p>Open a terminal and execute:
+<div class="highlight"><pre><span></span><code>npm -g i @plone/create-volto-app
+</code></pre></div></p>
+</li>
+<li>
+<p>Create a new Volto app using the recently added command, providing the name of the new app (folder) to be created.
+<div class="highlight"><pre><span></span><code>create-volto-app myvoltoapp
+</code></pre></div></p>
+</li>
+<li>
+<p>Change directory to the newly created folder <code>myvoltoapp</code> (or the one you've chosen):
+<div class="highlight"><pre><span></span><code>cd myvoltoapp
+</code></pre></div></p>
+</li>
+</ol>
+<p>Then start Volto with:</p>
+<div class="highlight"><pre><span></span><code>yarn start
+</code></pre></div>
+<p>This command will build an in-memory bundle and execute Volto in development mode. Open a browser to
+take a look at <a href="http://localhost:3000">http://localhost:3000</a></p>
+<div class="admonition tip try the new yeoman based generator">
+<p class="admonition-title">Tip</p>
+<p>The Volto developer community is working on a new <a href="https://github.com/plone/generator-volto.git">enhanced
+generator</a>. In addition to
+bootstrapping standalone Volto projects, it can also bootstrap Volto
+addons. Give it a try!</p>
+</div>
+<h2 id="build-the-production-bundle">Build the production bundle<a class="headerlink" href="#build-the-production-bundle" title="Permanent link">#</a></h2>
+<p>In production environments, you should build an static version of your (Volto) app. The
+app should be run in a node process (because of the server side rendering
+part), but it also have a client part that is provided and deployed by the server
+side rendering process.</p>
+<ol>
+<li>
+<p>Compile the app using the command:
+<div class="highlight"><pre><span></span><code>yarn build
+</code></pre></div>
+The resultant build is available in the <code>build</code> folder.</p>
+</li>
+<li>
+<p>Run the Volto Nodejs process
+<div class="highlight"><pre><span></span><code>yarn start:prod
+</code></pre></div></p>
+</li>
+</ol>
+<p>to run the node process with the production build. You can also run it
+manually:
+<div class="highlight"><pre><span></span><code>NODE_ENV=production node build/server.js
+</code></pre></div>
+Your production ready Volto will be available in <a href="http://localhost:3000">http://localhost:3000</a></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+        
+          <a href="../roadmap/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Developer roadmap
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Made with ❤️ by the Plone Community - All code owned by the Plone Foundation
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.6a3d08fc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

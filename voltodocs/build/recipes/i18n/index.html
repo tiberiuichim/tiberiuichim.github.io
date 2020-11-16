@@ -1,0 +1,1471 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+    
+    
+      
+        <title>Internationalization - Volto Developer Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bc7e593a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab28b872.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#009485">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700%7CSource+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Poppins",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.oct2020.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/pygments.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="teal" data-md-color-accent="red">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#internationalization" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Volto Developer Documentation" class="md-header-nav__button md-logo" aria-label="Volto Developer Documentation">
+      
+  <img src="../../images/volto-h-transparent.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Volto Developer Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Internationalization
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/plone/volto/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Volto Developer Documentation" class="md-nav__button md-logo" aria-label="Volto Developer Documentation">
+      
+  <img src="../../images/volto-h-transparent.svg" alt="logo">
+
+    </a>
+    Volto Developer Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/plone/volto/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Getting Started
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/install/" class="md-nav__link">
+      Bootstrap Volto
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/roadmap/" class="md-nav__link">
+      Developer roadmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/others/" class="md-nav__link">
+      Learning resources
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../design-principles/" class="md-nav__link">
+      Design principles
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Configuration
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Configuration" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/how-to/" class="md-nav__link">
+      What is configurable?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/settings-reference/" class="md-nav__link">
+      Settings reference guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/internalproxy/" class="md-nav__link">
+      Internal proxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/richeditor-settings/" class="md-nav__link">
+      Richeditor settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/multilingual/" class="md-nav__link">
+      Multilingual
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Theming & Semantic UI
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Theming & Semantic UI" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Theming & Semantic UI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../theming/about-semantic/" class="md-nav__link">
+      About Semantic UI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../theming/semanticui-theming/" class="md-nav__link">
+      Semantic UI Theming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../theming/theming-engine/" class="md-nav__link">
+      Theming Engine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../theming/theming-strategy/" class="md-nav__link">
+      Theming strategy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../theming/custom-styling/" class="md-nav__link">
+      Custom styling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../theming/integrate-third-party/" class="md-nav__link">
+      Integrate third party
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Development recipes
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Development recipes" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Development recipes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../creating-project/" class="md-nav__link">
+      Creating a project
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../folder-structure/" class="md-nav__link">
+      Folder structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../customizing-components/" class="md-nav__link">
+      Customizing components
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../customizing-views/" class="md-nav__link">
+      Customizing views
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../creating-views/" class="md-nav__link">
+      Creating new views
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Internationalization
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Internationalization
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#broad-overview" class="md-nav__link">
+    Broad overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-i18n-strings" class="md-nav__link">
+    Creating i18n Strings
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating i18n Strings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#translating-text-within-html-elements" class="md-nav__link">
+    Translating Text Within HTML Elements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translating-attributes" class="md-nav__link">
+    Translating Attributes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extracting-i18n-strings" class="md-nav__link">
+    Extracting i18n Strings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing-translations-for-a-unsupported-language" class="md-nav__link">
+    Contributing translations for a unsupported language
+  </a>
+  
+    <nav class="md-nav" aria-label="Contributing translations for a unsupported language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-language-from-transifex" class="md-nav__link">
+    Update language from Transifex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-new-language-from-transifex" class="md-nav__link">
+    Add new language from Transifex
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../express/" class="md-nav__link">
+      Express middleware
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lazyload/" class="md-nav__link">
+      Lazy loading and code splitting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../overridei18n/" class="md-nav__link">
+      Overriding i18n messages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../appextras/" class="md-nav__link">
+      App component insertion point
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../widget/" class="md-nav__link">
+      Create a widget
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../action-reducers.md" class="md-nav__link">
+      Write Redux action/reducers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fetch-data/" class="md-nav__link">
+      Fetch data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Blocks
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Blocks" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        Blocks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blocks/introduction/" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blocks/anatomy/" class="md-nav__link">
+      Anatomy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blocks/settings/" class="md-nav__link">
+      Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blocks/editcomponent/" class="md-nav__link">
+      Edit components
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Addons
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Addons" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        Addons
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../addons/" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../addons/best-practices/" class="md-nav__link">
+      Best practices
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../backend/" class="md-nav__link">
+      Backend integration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Deploying
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Deploying" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon"></span>
+        Deploying
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../deploying/simple/" class="md-nav__link">
+      Simple deployment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../deploying/pm2/" class="md-nav__link">
+      Using PM2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../deploying/apache/" class="md-nav__link">
+      Using apache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../deploying/sentry/" class="md-nav__link">
+      Using sentry
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../upgrade-guide/" class="md-nav__link">
+      Upgrade Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Developer Guidelines
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Developer Guidelines" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        <span class="md-nav__icon md-icon"></span>
+        Developer Guidelines
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/accessibility-guidelines/" class="md-nav__link">
+      Accessibility
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/react/" class="md-nav__link">
+      React
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/babel/" class="md-nav__link">
+      Babel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/redux/" class="md-nav__link">
+      Redux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/routing/" class="md-nav__link">
+      Routing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/linting/" class="md-nav__link">
+      Linting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/language-features/" class="md-nav__link">
+      Language features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/acceptance-tests/" class="md-nav__link">
+      Acceptance tests
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Contributing
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Contributing" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        <span class="md-nav__icon md-icon"></span>
+        Contributing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contributing/guidelines/" class="md-nav__link">
+      Guidelines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#broad-overview" class="md-nav__link">
+    Broad overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-i18n-strings" class="md-nav__link">
+    Creating i18n Strings
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating i18n Strings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#translating-text-within-html-elements" class="md-nav__link">
+    Translating Text Within HTML Elements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translating-attributes" class="md-nav__link">
+    Translating Attributes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extracting-i18n-strings" class="md-nav__link">
+    Extracting i18n Strings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing-translations-for-a-unsupported-language" class="md-nav__link">
+    Contributing translations for a unsupported language
+  </a>
+  
+    <nav class="md-nav" aria-label="Contributing translations for a unsupported language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-language-from-transifex" class="md-nav__link">
+    Update language from Transifex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-new-language-from-transifex" class="md-nav__link">
+    Add new language from Transifex
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/plone/volto/edit/master/docs/recipes/i18n.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="internationalization">Internationalization<a class="headerlink" href="#internationalization" title="Permanent link">#</a></h1>
+<p>Internationalization (i18n) is the process of creating user interfaces which are suitable for different languages and cultural contexts.
+Volto uses the library <a href="https://www.npmjs.com/package/react-intl">react-intl</a> to provide translations for any potential language.
+Anything you can read in the <a href="https://github.com/formatjs/react-intl/blob/master/docs/README.md">official documentation of react-intl</a> also applies for Volto.</p>
+<p>However this section teaches you about the most common use cases relating to i18n you probably will have when developing your <a href="/addons/">own Add-on</a> or contributing to the Volto core itself.</p>
+<h2 id="broad-overview">Broad overview<a class="headerlink" href="#broad-overview" title="Permanent link">#</a></h2>
+<p>The workflow for creating <em>new</em> translatable texts is as follows:</p>
+<ol>
+<li>Create translatable i18n strings in your code</li>
+<li>Extract all i18n strings from your code with a script and create artifacts like <code>.po</code> and <code>.pot</code> files</li>
+<li>Use your favorite editor to translate all i18n strings (i.e. edit the <code>.po</code> files)</li>
+<li>Re-run the script, which then moves the translations from the <code>.po</code> files into for Volto usable <code>.json</code> files</li>
+</ol>
+<p>This way of organizing translations relies on <a href="https://en.wikipedia.org/wiki/Gettext">gettext</a>, a proven and established system with great tool support.</p>
+<p>All translation files are located under the directory <code>locales</code>.
+This might look like this:</p>
+<div class="highlight"><pre><span></span><code>$ tree locales/
+locales/
+├── de
+│   └── LC_MESSAGES
+│       └── volto.po
+├── de.json
+├── en
+│   └── LC_MESSAGES
+│       └── volto.po
+├── en.json
+├── es
+│   └── LC_MESSAGES
+│       └── volto.po
+├── es.json
+├── it
+│   └── LC_MESSAGES
+│       └── volto.po
+├── it.json
+├── ja
+│   └── LC_MESSAGES
+│       └── volto.po
+├── ja.json
+├── nl
+│   └── LC_MESSAGES
+│       └── volto.po
+├── nl.json
+└── volto.pot
+
+<span class="m">12</span> directories, <span class="m">13</span> files
+</code></pre></div>
+<p>The file <code>volto.pot</code> holds all extracted i18n strings and acts as master template for all the <code>*.po</code> files.
+The translation for each language is stored within a dedicated sub-directory (like <code>en</code> for English, <code>it</code> for Italian, etc.) and are stored as <code>*.po</code> file and separately stored directly under <code>locales</code> as <code>*.json</code> file.</p>
+<h2 id="creating-i18n-strings">Creating i18n Strings<a class="headerlink" href="#creating-i18n-strings" title="Permanent link">#</a></h2>
+<h3 id="translating-text-within-html-elements">Translating Text Within HTML Elements<a class="headerlink" href="#translating-text-within-html-elements" title="Permanent link">#</a></h3>
+<p><code>react-intl</code> can identify translatable texts with the <code>FormattedMessage</code> components.
+As the name of this component suggests, it is also possible to format your messages as your liking.</p>
+<p>This is an example of how you can write a text with contents <code>Hello World</code>, which can be identified via <code>hello_world</code>:</p>
+<div class="highlight"><pre><span></span><code>import { FormattedMessage } from &#39;react-intl&#39;;
+
+function HelloWorld(props) {
+  return (
+    &lt;div&gt;
+      &lt;FormattedMessage
+        id=&quot;hello_world&quot;
+        defaultMessage=&quot;Hello World&quot;
+      /&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre></div>
+<p>The identifier <code>hello_world</code> is then commonly used between all the translations.
+There are also more features available such as using placeholders. See the docs for all features in the <a href="https://github.com/formatjs/react-intl/blob/master/docs/Components.md#formattedmessage">FormattedMessage component</a>.</p>
+<h3 id="translating-attributes">Translating Attributes<a class="headerlink" href="#translating-attributes" title="Permanent link">#</a></h3>
+<p>As <code>FormatMessage</code> is only suitable for creating text within HTML elements, it cannot be used for translating individual attributes.
+But with the method <a href="https://github.com/formatjs/react-intl/blob/master/docs/API.md#formatmessage">formatMessage</a> there exists another way to translate primitive strings.</p>
+<p>This approach can be best explained with an example: Assume you have a component called <code>TeaserImage</code> which contains an image that has for accessibility reasons the <code>alt</code> attribute.</p>
+<p>To translate the <code>alt</code> attribute, you have to do the following steps:</p>
+<ol>
+<li>Import the following necessary methods:
+<div class="highlight"><pre><span></span><code>import { defineMessages, injectIntl, intlShape } from &#39;react-intl&#39;;
+</code></pre></div></li>
+<li>Define a message (or more) via <a href="https://github.com/formatjs/react-intl/blob/master/docs/API.md#definemessages">defineMessages</a>:
+<div class="highlight"><pre><span></span><code>const messages = defineMessages({
+  teaserAltText: {
+    id: &#39;teaser_alt_text&#39;,
+    defaultMessage: &#39;Teaser Alt Text&#39;,
+  },
+});
+</code></pre></div></li>
+<li>As the method <code>formatMessage</code> in our component class/function is needed, there is a special propery <code>intl</code>, that needs to be injected with <em>either</em> the following ways:
+<div class="highlight"><pre><span></span><code>// When using a pure function:
+export default injectIntl(TeaserImage);
+
+// OR when using a component:
+@injectIntl
+class TeaserImage extends Component {
+  ...
+}
+</code></pre></div>
+Since you now have another prop available, it has to be to properly defined in the propTypes:
+<div class="highlight"><pre><span></span><code>TeaserImage.propTypes = {
+  intl: intlShape.isRequired,
+  ...
+};
+</code></pre></div></li>
+<li>As last step, the method can be used like this:
+<div class="highlight"><pre><span></span><code>&lt;img src=&quot;...&quot; alt={intl.formatMessage(messages.teaserAltText)}&gt;
+</code></pre></div></li>
+</ol>
+<h2 id="extracting-i18n-strings">Extracting i18n Strings<a class="headerlink" href="#extracting-i18n-strings" title="Permanent link">#</a></h2>
+<p>Volto provides an i18n extraction script to get all translatable strings from your application.</p>
+<p>This script can be invoked by this command:</p>
+<div class="highlight"><pre><span></span><code>$ yarn i18n
+</code></pre></div>
+<p>This will generate the following output:</p>
+<div class="highlight"><pre><span></span><code>Extracting messages from source files...
+Synchronizing messages to pot file...
+Synchronizing messages to po files...
+Generating the json files...
+done!
+</code></pre></div>
+<p>As the output suggests it will first extract all messages from the source files into <code>.json</code> files.
+Then it will synchronize the extracted messages with the <code>.pot</code> master template and with all the <code>.po</code> files found in the project.
+This script will combine the messages located in Volto itself and the current project, and combine them into the <code>.json</code> files.</p>
+<h2 id="contributing-translations-for-a-unsupported-language">Contributing translations for a unsupported language<a class="headerlink" href="#contributing-translations-for-a-unsupported-language" title="Permanent link">#</a></h2>
+<p>The Volto project welcomes all speakers from the world to include any language, which is not supported yet.</p>
+<p>You can contribute to translate Volto into severals languages at <a href="https://www.transifex.com/plone/plone5/volto-pot/">Transifex.net</a>.</p>
+<p>When you done your translation resource at Transifex.net, you need to add the locales files into Volto project, for that you need use <a href="https://docs.transifex.com/client/introduction">transifex-client</a> tool and <a href="https://docs.transifex.com/client/installing-the-client">install it</a>.</p>
+<h3 id="update-language-from-transifex">Update language from Transifex<a class="headerlink" href="#update-language-from-transifex" title="Permanent link">#</a></h3>
+<p>To get translate the latest translation changes, you have to do the following steps:</p>
+<ol>
+<li>You can pull the latest changes for a specific language, for example <strong>'de'</strong> from <strong>Transifex.net</strong> for <em>Volto project</em>, by this command:
+<div class="highlight"><pre><span></span><code>$ tx pull -f -l de
+</code></pre></div>
+This will generate the following output:
+<div class="highlight"><pre><span></span><code>tx INFO: Pulling translations <span class="k">for</span> resource plone5.volto-pot <span class="o">(</span>source: locales/volto.pot<span class="o">)</span>
+tx INFO:  -&gt; de: locales/de/LC_MESSAGES/volto.po
+tx INFO: Done.
+</code></pre></div>
+Also can pull the latest changes for all languages available at from <strong>Transifex.net</strong> for <em>Volto project</em>, by this command:
+<div class="highlight"><pre><span></span><code>$ tx pull -f --all
+</code></pre></div></li>
+<li>You need updated the json file for the language updated from <strong>Transifex.net</strong> for <em>Volto project</em>, by this command:
+<div class="highlight"><pre><span></span><code>$ yarn i18n
+</code></pre></div>
+This command generate again the <code>locales/de.json</code> file updated, it is needed for Volto app.</li>
+<li>Please, update the <code>CHANGELOG.md</code> file, make commits and push the changes via pull request at the repository.</li>
+</ol>
+<p><strong>Tip:</strong> For more information about each command, use <code>tx &lt;command&gt; --help</code>. As an example, to learn more about the <code>tx pull</code> command, run <code>tx pull --help</code>.</p>
+<h3 id="add-new-language-from-transifex">Add new language from Transifex<a class="headerlink" href="#add-new-language-from-transifex" title="Permanent link">#</a></h3>
+<ol>
+<li>You should check what languages are available in <strong>Transifex.net</strong> to translate for the <a href="https://www.transifex.com/plone/plone5/volto-pot/">Volto project</a>. If the language to be translated does not exist, please <a href="https://docs.transifex.com/projects/adding-and-removing-project-languages">request it</a>.</li>
+<li>You can pull the new language for example <em>Portuguese (Brazil)</em> aka <strong>'pt_BR'</strong> from <strong>Transifex.net</strong> for <em>Volto project</em>, by this command:
+<div class="highlight"><pre><span></span><code>$ tx pull -f -l pt_BR
+</code></pre></div></li>
+<li>You new to modify the <code>src/server.jsx</code> file and add in the <em>'import section'</em> as the follow:
+<div class="highlight"><pre><span></span><code>import ptBrLocale from &#39;~/../locales/pt_BR.json&#39;;
+</code></pre></div>
+Also you need define the new locale into <em>'locales const'</em> as the follow:
+<div class="highlight"><pre><span></span><code>  pt: ptBrLocale,
+</code></pre></div></li>
+<li>You new to modify the <code>src/constants/Languages.js</code> file and add a new line at <em>'module.exports'</em> section as the follow:
+<div class="highlight"><pre><span></span><code>  pt_BR: &#39;Português (Brasil)&#39;,
+</code></pre></div></li>
+<li>You need create the json file for the language created from <strong>Transifex.net</strong> for <em>Volto project</em>, by this command:
+<div class="highlight"><pre><span></span><code>$ yarn i18n
+</code></pre></div>
+This command generate the <code>locales/pt_BR.json</code> file, it is needed for Volto app.</li>
+<li>Please, update the <code>CHANGELOG.md</code> file, make commits and push the changes via pull request at the repository.</li>
+</ol>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../creating-views/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Creating new views
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../express/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Express middleware
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Made with ❤️ by the Plone Community - All code owned by the Plone Foundation
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.6a3d08fc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
