@@ -433,8 +433,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../theming/integrate-third-party/" class="md-nav__link">
-      Integrate third party
+    <a href="../../theming/using-third-party.md" class="md-nav__link">
+      Use another theming engine
     </a>
   </li>
 
@@ -889,9 +889,65 @@
 
 
   <li class="md-nav__item">
-    <a href="../react/" class="md-nav__link">
-      React
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Language features
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Language features
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#babel" class="md-nav__link">
+    Babel
+  </a>
+  
+    <nav class="md-nav" aria-label="Babel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#browser-compatibility" class="md-nav__link">
+    Browser compatibility
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-to-deprecated-browsers" class="md-nav__link">
+    Support to deprecated browsers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -901,8 +957,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../babel/" class="md-nav__link">
-      Babel
+    <a href="../react/" class="md-nav__link">
+      React
     </a>
   </li>
 
@@ -957,10 +1013,71 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Language features
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
       Language features
     </a>
     
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#babel" class="md-nav__link">
+    Babel
+  </a>
+  
+    <nav class="md-nav" aria-label="Babel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#browser-compatibility" class="md-nav__link">
+    Browser compatibility
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-to-deprecated-browsers" class="md-nav__link">
+    Support to deprecated browsers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../testing/" class="md-nav__link">
+      Testing
+    </a>
   </li>
 
         
@@ -1036,6 +1153,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#babel" class="md-nav__link">
+    Babel
+  </a>
+  
+    <nav class="md-nav" aria-label="Babel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#browser-compatibility" class="md-nav__link">
+    Browser compatibility
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-to-deprecated-browsers" class="md-nav__link">
+    Support to deprecated browsers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1052,11 +1204,54 @@
                 
                 
                 <h1 id="language-features-and-conventions">Language features and conventions<a class="headerlink" href="#language-features-and-conventions" title="Permanent link">#</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This documentation is a work in progress. Any help is welcome to fill in the
-gaps!</p>
+<h2 id="babel">Babel<a class="headerlink" href="#babel" title="Permanent link">#</a></h2>
+<p>Volto is developed using Babel to transpile modern Javascript to Javascript that
+browsers are able to understand and execute.</p>
+<p>Ecma International's TC39 (<a href="https://tc39.es/">https://tc39.es/</a>) is a group of JavaScript developers,
+implementers, academics, and more, collaborating with the community to maintain and
+evolve the definition of JavaScript. They stablished a process
+(<a href="https://tc39.es/process-document/">https://tc39.es/process-document/</a>) where the proposals are discussed, developed, and
+eventually approved (or dropped). The process has five stages (0 to 4) where reaching
+the stage 4 means the proposal is accepted and it becomes part of the Javascript
+specification.</p>
+<p>Babel enables a series of features and syntax that the developer can use in code to
+develop Volto on. These features are the proposals the TC39 is working on in the
+different stages of evolution.</p>
+<p>Volto uses <code>babel-razzle-preset</code> which in turns uses <code>@babel/preset-env</code> which enables
+the use of all TC39 proposals currently in TC39's stage 4
+(<a href="https://github.com/tc39/proposals/blob/HEAD/finished-proposals.md#finished-proposals">https://github.com/tc39/proposals/blob/HEAD/finished-proposals.md#finished-proposals</a>).</p>
+<h3 id="browser-compatibility">Browser compatibility<a class="headerlink" href="#browser-compatibility" title="Permanent link">#</a></h3>
+<p>Babel preset-env uses <code>browserlist</code> which gives the ability to micromanage the
+transformations needed by the current project depending of the browser support you are
+currently targeting.</p>
+<p>By doing this, enables the bundles to be smaller, as the resultant code does not need to
+support old browsers (thus, transform your code to ES5 compatible code) as Babel will
+apply only the required transforms that your target enviroments need. For more
+information: <a href="https://babeljs.io/docs/en/babel-preset-env#browserslist-integration">https://babeljs.io/docs/en/babel-preset-env#browserslist-integration</a></p>
+<p>Volto project generators use this browserlist by default (you can find it in your local <code>package.json</code>):</p>
+<div class="highlight"><pre><span></span><code>  <span class="s2">&quot;browserslist&quot;</span><span class="err">:</span> <span class="p">[</span>
+    <span class="s2">&quot;&gt;1%&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;last 4 versions&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Firefox ESR&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;not ie 11&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;not dead&quot;</span>
+  <span class="p">]</span><span class="err">,</span>
+</code></pre></div>
+<p>which you can adjust depending on the environments you are targeting in your local
+<code>package.json</code> file. You can find more information about how the queries in <code>broserlist</code>
+works in: <a href="https://github.com/browserslist/browserslist#queries">https://github.com/browserslist/browserslist#queries</a></p>
+<h3 id="support-to-deprecated-browsers">Support to deprecated browsers<a class="headerlink" href="#support-to-deprecated-browsers" title="Permanent link">#</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Volto does not support deprecated browsers from its vendor (eg. IE11).</p>
 </div>
+<p>If you still need to support deprecated browsers, you should use <code>browserslist</code> in your
+project to enable the required transforms for the target deprecated environments you
+have to support.</p>
+<p>However, Volto (or its dependencies) might not be compatible with old browsers anyways,
+and you might need to provide some other workarounds to make the build work (and the
+deprecated browser not crash). You can refer to <a href="../../ie11compat/">this (outdated)
+document</a> in order to get some hints on how to do it.</p>
                 
               
               
@@ -1090,13 +1285,13 @@ gaps!</p>
           </a>
         
         
-          <a href="../acceptance-tests/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../testing/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Acceptance tests
+                Testing
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

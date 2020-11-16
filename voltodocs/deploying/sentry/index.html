@@ -433,8 +433,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../theming/integrate-third-party/" class="md-nav__link">
-      Integrate third party
+    <a href="../../theming/using-third-party.md" class="md-nav__link">
+      Use another theming engine
     </a>
   </li>
 
@@ -968,8 +968,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../developer-guidelines/react/" class="md-nav__link">
-      React
+    <a href="../../developer-guidelines/language-features/" class="md-nav__link">
+      Language features
     </a>
   </li>
 
@@ -980,8 +980,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../developer-guidelines/babel/" class="md-nav__link">
-      Babel
+    <a href="../../developer-guidelines/react/" class="md-nav__link">
+      React
     </a>
   </li>
 
@@ -1030,6 +1030,18 @@
   <li class="md-nav__item">
     <a href="../../developer-guidelines/language-features/" class="md-nav__link">
       Language features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/testing/" class="md-nav__link">
+      Testing
     </a>
   </li>
 
@@ -1210,23 +1222,54 @@ After starting the application if an error will occure, the errors will be sent 
 node build/server.js
 </code></pre></div>
 <h3 id="2-runtime">2. Runtime<a class="headerlink" href="#2-runtime" title="Permanent link">#</a></h3>
-<p>In case you plan to use the application using docker, you will not want to have the sentry setup in the docker image.
-The configuration for setting up sentry on runtime is very similar as how we set it up for buildtime, but with some small differences:</p>
-<ul>
-<li>SENTRY_URL - the url of sentry</li>
-<li>SENTRY_AUTH_TOKEN - the authentication token for sentry</li>
-<li>SENTRY_ORG - the name of the organization in sentry</li>
-<li>SENTRY_PROJECT -the name of the project in sentry</li>
-<li>SENTRY_RELEASE - release number</li>
-<li>RAZZLE_SENTRY_DSN - required to enable the feature</li>
-<li>RAZZLE_SENTRY_FRONTEND_CONFIG - optional, here we can specify TAGS
-   and ADDITIONAL DATA for the messages from the browser we send to sentry</li>
-<li>RAZZLE_SENTRY_BACKEND_CONFIG - same as RAZZLE_SENTRY_FRONTEND_CONFIG, but we configure the messages from the backend</li>
-<li>RAZZLE_SENTRY_RELEASE - release number, should be the same as SENTRY_RELEASE</li>
-</ul>
-<p>In the entrypoint of our docker image we have to add the ./create-sentry-release.sh script. When the container is started, this script will check in sentry if the specified release already exists, if not, it will create it and upload the source code and the source maps.
-The script can be executed also manually and if we want to overwrite the existing files in sentry, we can use the --force  flag:</p>
-<p><div class="highlight"><pre><span></span><code>./create-sentry-release.sh --force
+<p>Within your Volto project or a dedicated Volto add-on you can configure Sentry via <code>settings.sentryOptions</code> configuration key:</p>
+<p><div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="p">{</span>
+  <span class="nx">settings</span> <span class="nx">as</span> <span class="nx">defaultSettings</span><span class="p">,</span>
+<span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@plone/volto/config&#39;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">...</span><span class="nx">defaultSettings</span><span class="p">,</span>
+  <span class="nx">sentryOptions</span><span class="o">:</span> <span class="p">{</span>
+    <span class="p">...</span><span class="nx">defaultSettings</span><span class="p">.</span><span class="nx">sentryOptions</span><span class="p">,</span>
+    <span class="nx">dsn</span><span class="o">:</span> <span class="s1">&#39;https://key@sentry.io/1&#39;</span><span class="p">,</span>
+    <span class="nx">environment</span><span class="o">:</span> <span class="s1">&#39;production&#39;</span><span class="p">,</span>
+    <span class="nx">release</span><span class="o">:</span> <span class="s1">&#39;1.2.3&#39;</span><span class="p">,</span>
+    <span class="nx">serverName</span><span class="o">:</span> <span class="s1">&#39;volto&#39;</span><span class="p">,</span>
+    <span class="nx">tags</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">site</span><span class="o">:</span> <span class="s1">&#39;foo.bar&#39;</span><span class="p">,</span>
+      <span class="nx">app</span><span class="o">:</span> <span class="s1">&#39;test_app&#39;</span><span class="p">,</span>
+      <span class="nx">logger</span><span class="o">:</span> <span class="s1">&#39;volto&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nx">extras</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;value&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nx">integrations</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">...</span><span class="nx">defaultSettings</span><span class="p">.</span><span class="nx">sentryOptions</span><span class="p">.</span><span class="nx">integrations</span><span class="p">,</span>
+        <span class="c1">// new MyAwesomeIntegration()</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+<span class="nx">See</span> <span class="nx">more</span> <span class="nx">about</span> <span class="p">[</span><span class="nx">Sentry</span> <span class="nx">Custom</span> <span class="nx">Integrations</span><span class="p">](</span><span class="nx">https</span><span class="o">:</span><span class="c1">//docs.sentry.io/platforms/javascript/configuration/integrations)</span>
+
+<span class="nx">In</span> <span class="k">case</span> <span class="nx">you</span> <span class="nx">plan</span> <span class="nx">to</span> <span class="nx">use</span> <span class="nx">the</span> <span class="nx">application</span> <span class="nx">using</span> <span class="nx">docker</span><span class="p">,</span> <span class="nx">you</span> <span class="nx">will</span> <span class="nx">not</span> <span class="nx">want</span> <span class="nx">to</span> <span class="nx">have</span> <span class="nx">the</span> <span class="nx">sentry</span> <span class="nx">setup</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">docker</span> <span class="nx">image</span><span class="p">.</span>
+<span class="nx">The</span> <span class="nx">configuration</span> <span class="k">for</span> <span class="nx">setting</span> <span class="nx">up</span> <span class="nx">sentry</span> <span class="nx">on</span> <span class="nx">runtime</span> <span class="nx">is</span> <span class="nx">very</span> <span class="nx">similar</span> <span class="nx">as</span> <span class="nx">how</span> <span class="nx">we</span> <span class="nx">set</span> <span class="nx">it</span> <span class="nx">up</span> <span class="k">for</span> <span class="nx">buildtime</span><span class="p">,</span> <span class="nx">but</span> <span class="kd">with</span> <span class="nx">some</span> <span class="nx">small</span> <span class="nx">differences</span><span class="o">:</span>
+
+ <span class="o">-</span> <span class="nx">SENTRY_URL</span> <span class="o">-</span> <span class="nx">the</span> <span class="nx">url</span> <span class="k">of</span> <span class="nx">sentry</span>
+ <span class="o">-</span> <span class="nx">SENTRY_AUTH_TOKEN</span> <span class="o">-</span> <span class="nx">the</span> <span class="nx">authentication</span> <span class="nx">token</span> <span class="k">for</span> <span class="nx">sentry</span>
+ <span class="o">-</span> <span class="nx">SENTRY_ORG</span> <span class="o">-</span> <span class="nx">the</span> <span class="nx">name</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">organization</span> <span class="k">in</span> <span class="nx">sentry</span>
+ <span class="o">-</span> <span class="nx">SENTRY_PROJECT</span> <span class="o">-</span><span class="nx">the</span> <span class="nx">name</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">project</span> <span class="k">in</span> <span class="nx">sentry</span>
+ <span class="o">-</span> <span class="nx">SENTRY_RELEASE</span> <span class="o">-</span> <span class="nx">release</span> <span class="nx">number</span>
+ <span class="o">-</span> <span class="nx">RAZZLE_SENTRY_DSN</span> <span class="o">-</span> <span class="nx">required</span> <span class="nx">to</span> <span class="nx">enable</span> <span class="nx">the</span> <span class="nx">feature</span>
+ <span class="o">-</span> <span class="nx">RAZZLE_SENTRY_FRONTEND_CONFIG</span> <span class="o">-</span> <span class="nx">optional</span><span class="p">,</span> <span class="nx">here</span> <span class="nx">we</span> <span class="nx">can</span> <span class="nx">specify</span> <span class="nx">TAGS</span>
+   <span class="nx">and</span> <span class="nx">ADDITIONAL</span> <span class="nx">DATA</span> <span class="k">for</span> <span class="nx">the</span> <span class="nx">messages</span> <span class="nx">from</span> <span class="nx">the</span> <span class="nx">browser</span> <span class="nx">we</span> <span class="nx">send</span> <span class="nx">to</span> <span class="nx">sentry</span>
+ <span class="o">-</span> <span class="nx">RAZZLE_SENTRY_BACKEND_CONFIG</span> <span class="o">-</span> <span class="nx">same</span> <span class="nx">as</span> <span class="nx">RAZZLE_SENTRY_FRONTEND_CONFIG</span><span class="p">,</span> <span class="nx">but</span> <span class="nx">we</span> <span class="nx">configure</span> <span class="nx">the</span> <span class="nx">messages</span> <span class="nx">from</span> <span class="nx">the</span> <span class="nx">backend</span>
+ <span class="o">-</span> <span class="nx">RAZZLE_SENTRY_RELEASE</span> <span class="o">-</span> <span class="nx">release</span> <span class="nx">number</span><span class="p">,</span> <span class="nx">should</span> <span class="nx">be</span> <span class="nx">the</span> <span class="nx">same</span> <span class="nx">as</span> <span class="nx">SENTRY_RELEASE</span>
+
+<span class="nx">In</span> <span class="nx">the</span> <span class="nx">entrypoint</span> <span class="k">of</span> <span class="nx">our</span> <span class="nx">docker</span> <span class="nx">image</span> <span class="nx">we</span> <span class="nx">have</span> <span class="nx">to</span> <span class="nx">add</span> <span class="nx">the</span> <span class="p">.</span><span class="o">/</span><span class="nx">create</span><span class="o">-</span><span class="nx">sentry</span><span class="o">-</span><span class="nx">release</span><span class="p">.</span><span class="nx">sh</span> <span class="nx">script</span><span class="p">.</span> <span class="nx">When</span> <span class="nx">the</span> <span class="nx">container</span> <span class="nx">is</span> <span class="nx">started</span><span class="p">,</span> <span class="k">this</span> <span class="nx">script</span> <span class="nx">will</span> <span class="nx">check</span> <span class="k">in</span> <span class="nx">sentry</span> <span class="k">if</span> <span class="nx">the</span> <span class="nx">specified</span> <span class="nx">release</span> <span class="nx">already</span> <span class="nx">exists</span><span class="p">,</span> <span class="k">if</span> <span class="nx">not</span><span class="p">,</span> <span class="nx">it</span> <span class="nx">will</span> <span class="nx">create</span> <span class="nx">it</span> <span class="nx">and</span> <span class="nx">upload</span> <span class="nx">the</span> <span class="nx">source</span> <span class="nx">code</span> <span class="nx">and</span> <span class="nx">the</span> <span class="nx">source</span> <span class="nx">maps</span><span class="p">.</span>
+<span class="nx">The</span> <span class="nx">script</span> <span class="nx">can</span> <span class="nx">be</span> <span class="nx">executed</span> <span class="nx">also</span> <span class="nx">manually</span> <span class="nx">and</span> <span class="k">if</span> <span class="nx">we</span> <span class="nx">want</span> <span class="nx">to</span> <span class="nx">overwrite</span> <span class="nx">the</span> <span class="nx">existing</span> <span class="nx">files</span> <span class="k">in</span> <span class="nx">sentry</span><span class="p">,</span> <span class="nx">we</span> <span class="nx">can</span> <span class="nx">use</span> <span class="nx">the</span> <span class="o">--</span><span class="nx">force</span>  <span class="nx">flag</span><span class="o">:</span>
+
+<span class="sb">```bash</span>
+<span class="sb">./create-sentry-release.sh --force</span>
 </code></pre></div>
 Example of entrypoint:</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env bash</span>
