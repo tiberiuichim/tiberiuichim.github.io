@@ -956,8 +956,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../developer-guidelines/accessibility-guidelines/" class="md-nav__link">
-      Accessibility
+    <a href="../../developer-guidelines/language-features/" class="md-nav__link">
+      Language features
     </a>
   </li>
 
@@ -968,8 +968,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../developer-guidelines/language-features/" class="md-nav__link">
-      Language features
+    <a href="../../developer-guidelines/linting/" class="md-nav__link">
+      Linting
     </a>
   </li>
 
@@ -1016,30 +1016,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../developer-guidelines/linting/" class="md-nav__link">
-      Linting
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../developer-guidelines/language-features/" class="md-nav__link">
-      Language features
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../developer-guidelines/testing/" class="md-nav__link">
       Testing
     </a>
@@ -1054,6 +1030,18 @@
   <li class="md-nav__item">
     <a href="../../developer-guidelines/acceptance-tests/" class="md-nav__link">
       Acceptance tests
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/accessibility-guidelines/" class="md-nav__link">
+      Accessibility
     </a>
   </li>
 
@@ -1193,7 +1181,7 @@
 <p>You can use Volto with third party libraries or themes written in sass and avoid applying semantic-ui on public facing views.
 This is made possible by code splitting, where interfaces have a marker CSS class to incapsulate styles and avoid conflicts between semantic-ui and the custom theme you would use.</p>
 <h2 id="the-problem">The problem<a class="headerlink" href="#the-problem" title="Permanent link">#</a></h2>
-<p>The main purpuse could be to use a sass based theme like Bootstrap.
+<p>The main purpose could be to use a sass based theme like Bootstrap.
 If you want to load a different styling library using the base Volto configuration, you will load a huge bundle with both having weight and performance issues thus this would likely imply conflicts on base elements as containers.</p>
 <h2 id="the-solution">The solution<a class="headerlink" href="#the-solution" title="Permanent link">#</a></h2>
 <p>Volto supports the split of the styles on a different theme: <code>pastanaga-cms-ui</code>.
@@ -1249,7 +1237,7 @@ import &#39;@plone/volto/../theme/themes/pastanaga/extras/extras.less&#39;
   <span class="p">],</span>
 <span class="p">});</span>
 </code></pre></div>
-<p>Complete example in an active project:<br />
+<p>Complete example in an active project:
 <a href="https://github.com/RedTurtle/design-volto-theme/blob/master/razzle.config.js">https://github.com/RedTurtle/design-volto-theme/blob/master/razzle.config.js</a></p>
 <p>In that project, there is the sass loader and the svg loader, too.</p>
 <h3 id="including-custom-styles">Including custom styles<a class="headerlink" href="#including-custom-styles" title="Permanent link">#</a></h3>
@@ -1262,7 +1250,7 @@ import &#39;@plone/volto/../theme/themes/pastanaga/extras/extras.less&#39;
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>to avoid troubles on basical stuff: this is useful to have the correct font in the public-ui component showed while in a cms-view.</p>
+<p>to avoid troubles on basic stuff: this is useful to have the correct font in the public-ui component showed while in a cms-view.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Consider adding <code>public-ui</code> CSS class as a wrapper for your components, so they will be using your public theme. A good example of this is for the blocks, that need the public-ui styles both while viewing the object and while editing it.

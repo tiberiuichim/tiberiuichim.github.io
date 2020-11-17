@@ -297,66 +297,9 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        What is configurable?
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
     <a href="./" class="md-nav__link md-nav__link--active">
       What is configurable?
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#settings" class="md-nav__link">
-    settings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#widgets" class="md-nav__link">
-    widgets
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#views" class="md-nav__link">
-    views
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#addonreducers" class="md-nav__link">
-    addonReducers
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#addonroutes" class="md-nav__link">
-    addonRoutes
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -943,8 +886,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../developer-guidelines/accessibility-guidelines/" class="md-nav__link">
-      Accessibility
+    <a href="../../developer-guidelines/language-features/" class="md-nav__link">
+      Language features
     </a>
   </li>
 
@@ -955,8 +898,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../developer-guidelines/language-features/" class="md-nav__link">
-      Language features
+    <a href="../../developer-guidelines/linting/" class="md-nav__link">
+      Linting
     </a>
   </li>
 
@@ -1003,30 +946,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../developer-guidelines/linting/" class="md-nav__link">
-      Linting
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../developer-guidelines/language-features/" class="md-nav__link">
-      Language features
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../developer-guidelines/testing/" class="md-nav__link">
       Testing
     </a>
@@ -1041,6 +960,18 @@
   <li class="md-nav__item">
     <a href="../../developer-guidelines/acceptance-tests/" class="md-nav__link">
       Acceptance tests
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer-guidelines/accessibility-guidelines/" class="md-nav__link">
+      Accessibility
     </a>
   </li>
 
@@ -1104,49 +1035,6 @@
   
     
   
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#settings" class="md-nav__link">
-    settings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#widgets" class="md-nav__link">
-    widgets
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#views" class="md-nav__link">
-    views
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#addonreducers" class="md-nav__link">
-    addonReducers
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#addonroutes" class="md-nav__link">
-    addonRoutes
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1213,20 +1101,22 @@ modify this configuration, then spreads and exports its configuration objects.
 This allows Volto to work the same way in either standalone version (when
 developing Volto itself), but also when used as a library, referenced from
 a Volto project.</p>
-<h4 id="settings">settings<a class="headerlink" href="#settings" title="Permanent link">#</a></h4>
-<p>The <code>settings</code> object of the <code>~/config</code> is a big registry of miscellaneous
-settings. See the <a href="/configuration/settings-reference">Settings reference</a> for
-a bit more details.</p>
-<h4 id="widgets">widgets<a class="headerlink" href="#widgets" title="Permanent link">#</a></h4>
-<p>The <code>widgets</code> object holds the widget registry, used to decide which widget
-should be used when rendering forms. Check <a href="https://github.com/plone/volto/blob/master/src/config/Widgets.jsx">its
-definition</a>
-but also the
-<a href="https://github.com/plone/volto/blob/6fd62cb2860bc7cf3cb7c36ea86bfd8bd03247d9/src/components/manage/Form/Field.jsx#L112">lookup mechanism</a>
-to understand how things work.</p>
-<h4 id="views">views<a class="headerlink" href="#views" title="Permanent link">#</a></h4>
-<p>The <code>views</code> registry allows configuration of the components that will be used
-to render the content. There are 4 types of views:</p>
+<dl>
+<dt><strong>settings</strong></dt>
+<dd>The <code>settings</code> object of the <code>~/config</code> is a big registry of miscellaneous
+ settings. See the <a href="/configuration/settings-reference">Settings reference</a>
+ for a bit more details.</dd>
+<dt><strong>widgets</strong></dt>
+<dd>The <code>widgets</code> object holds the widget registry, used to decide which
+ widget should be used when rendering forms. Check <a href="https://github.com/plone/volto/blob/master/src/config/Widgets.jsx">its
+ definition</a>
+ but also the <a href="https://github.com/plone/volto/blob/6fd62cb2860bc7cf3cb7c36ea86bfd8bd03247d9/src/components/manage/Form/Field.jsx#L112">lookup
+ mechanism</a>
+ to understand how things work.</dd>
+<dt><strong>views</strong></dt>
+<dd>
+<p>The <code>views</code> registry allows configuration of the components that will be
+used to render the content. There are 4 types of views:</p>
 <ul>
 <li>layout views, which are used based on the <code>layout</code> field of the incoming
   content</li>
@@ -1235,10 +1125,12 @@ to render the content. There are 4 types of views:</p>
 <li>and the error views, to be used for regular error pages (Forbidden, Not
   Found, etc).</li>
 </ul>
-<h4 id="addonreducers">addonReducers<a class="headerlink" href="#addonreducers" title="Permanent link">#</a></h4>
-<p>In the <code>addonReducers</code> you can register and potentially override (by name)
-any registered reducer from Volto or other loaded Volto addons.</p>
-<h4 id="addonroutes">addonRoutes<a class="headerlink" href="#addonroutes" title="Permanent link">#</a></h4>
+</dd>
+<dt><strong>addonReducers</strong></dt>
+<dd>In the <code>addonReducers</code> you can register and potentially override (by name)
+any registered reducer from Volto or other loaded Volto addons.</dd>
+<dt><strong>addonRoutes</strong></dt>
+<dd>
 <p>The <code>addonRoutes</code> is a list of routes declaration, to be used as child
 sub-routes for the App component. A route declaration looks like this (an
 example):</p>
@@ -1253,6 +1145,8 @@ more details. In its configuration, an addon would push additional routes to
 this data structure:</p>
 <div class="highlight"><pre><span></span><code>config.addonRoutes.push({ path: &#39;/**/chat&#39;, component: Chat });
 </code></pre></div>
+</dd>
+</dl>
                 
               
               
