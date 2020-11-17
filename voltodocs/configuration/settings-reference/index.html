@@ -1063,8 +1063,8 @@
 <dt><strong>defaultBlockType</strong></dt>
 <dd>The default block type in Volto is "text", which uses the current DraftJS-based implementation for the rich text editor. Future alternative rich text editors will need to use this setting and replace it with their block type. The block definition should also include the <code>blockHasValue</code> function, which is needed to activate the Block Chooser functionality. See this function signature in <a href="../../blocks/settings/">Blocks &gt; Settings</a>.</dd>
 <dt><strong>sentryOptions</strong></dt>
-<dd>Sentry configuration:</dd>
-</dl>
+<dd>
+<p>Sentry configuration:</p>
 <div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="p">{</span>
   <span class="nx">settings</span> <span class="nx">as</span> <span class="nx">defaultSettings</span><span class="p">,</span>
 <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@plone/volto/config&#39;</span><span class="p">;</span>
@@ -1093,15 +1093,15 @@
 <span class="p">};</span>
 </code></pre></div>
 <p>See more about <a href="../../deploying/sentry/">Sentry integration</a>.</p>
-<dl>
+</dd>
 <dt><strong>contentIcons</strong></dt>
-<dd>With this property you can configure Content Types icons.
+<dd>
+<p>With this property you can configure Content Types icons.
  Those are visible in Contents view (ex "Folder contents").  The default
  ones are in
  <a href="https://github.com/plone/volto/tree/master/src/config/ContentIcons.jsx">config/ContentIcons.jsx</a>
  and you can extend them in your project's config for custom content types
- using <code>settings.contentIcons</code>.</dd>
-</dl>
+ using <code>settings.contentIcons</code>.</p>
 <p>In Volto projects, you can configure this for custom content types like:</p>
 <div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">config</span> <span class="nx">from</span> <span class="s1">&#39;@plone/volto/config&#39;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="nx">courseSVG</span> <span class="nx">from</span> <span class="s1">&#39;./icons/course.svg&#39;</span><span class="p">;</span>
@@ -1113,6 +1113,8 @@
     <span class="nx">Course</span><span class="o">:</span> <span class="nx">courseSVG</span><span class="p">,</span>
 <span class="p">};</span>
 </code></pre></div>
+</dd>
+</dl>
                 
               
               
