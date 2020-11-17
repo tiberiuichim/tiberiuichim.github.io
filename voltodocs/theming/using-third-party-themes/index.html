@@ -13,7 +13,7 @@
     
     
       
-        <title>Using third party libraries/themes different from semantic-ui - Volto Developer Documentation</title>
+        <title>Use another theming engine - Volto Developer Documentation</title>
       
     
     
@@ -93,7 +93,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Using third party libraries/themes different from semantic-ui
+              Use another theming engine
             
           </span>
         </div>
@@ -350,10 +350,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Theming & Semantic UI
@@ -431,11 +433,90 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../using-third-party.md" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Use another theming engine
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       Use another theming engine
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-problem" class="md-nav__link">
+    The problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-solution" class="md-nav__link">
+    The solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-theme" class="md-nav__link">
+    Setting up the theme
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up the theme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-sass-loader" class="md-nav__link">
+    Use sass loader
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#including-custom-styles" class="md-nav__link">
+    Including custom styles
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-themes-using-this-approach" class="md-nav__link">
+    Example themes using this approach
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1204,6 +1285,41 @@ On the other hand, many Volto components are using <code>cms-ui</code>.</p>
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../custom-styling/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Custom styling
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../recipes/creating-project/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Creating a project
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
