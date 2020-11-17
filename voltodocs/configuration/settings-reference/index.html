@@ -309,9 +309,59 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Settings reference guide
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
       Settings reference guide
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navdepth" class="md-nav__link">
+    navDepth
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defaultblocktype" class="md-nav__link">
+    defaultBlockType
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentryoptions" class="md-nav__link">
+    sentryOptions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenticons" class="md-nav__link">
+    contentIcons
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1036,6 +1086,42 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navdepth" class="md-nav__link">
+    navDepth
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defaultblocktype" class="md-nav__link">
+    defaultBlockType
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentryoptions" class="md-nav__link">
+    sentryOptions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenticons" class="md-nav__link">
+    contentIcons
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1057,13 +1143,11 @@
 <p class="admonition-title">Note</p>
 </div>
 <p>This list is still incomplete, contributions are welcomed!</p>
-<dl>
-<dt><strong>navDepth</strong></dt>
-<dd>Navigation levels depth used in the navigation endpoint calls. Increasing this is useful for implementing fat navigation menus. Defaults to <code>1</code>.</dd>
-<dt><strong>defaultBlockType</strong></dt>
-<dd>The default block type in Volto is "text", which uses the current DraftJS-based implementation for the rich text editor. Future alternative rich text editors will need to use this setting and replace it with their block type. The block definition should also include the <code>blockHasValue</code> function, which is needed to activate the Block Chooser functionality. See this function signature in <a href="../../blocks/settings/">Blocks &gt; Settings</a>.</dd>
-<dt><strong>sentryOptions</strong></dt>
-<dd>
+<h2 id="navdepth">navDepth<a class="headerlink" href="#navdepth" title="Permanent link">#</a></h2>
+<p>Navigation levels depth used in the navigation endpoint calls. Increasing this is useful for implementing fat navigation menus. Defaults to <code>1</code>.</p>
+<h2 id="defaultblocktype">defaultBlockType<a class="headerlink" href="#defaultblocktype" title="Permanent link">#</a></h2>
+<p>The default block type in Volto is "text", which uses the current DraftJS-based implementation for the rich text editor. Future alternative rich text editors will need to use this setting and replace it with their block type. The block definition should also include the <code>blockHasValue</code> function, which is needed to activate the Block Chooser functionality. See this function signature in <a href="../../blocks/settings/">Blocks &gt; Settings</a>.</p>
+<h2 id="sentryoptions">sentryOptions<a class="headerlink" href="#sentryoptions" title="Permanent link">#</a></h2>
 <p>Sentry configuration:</p>
 <div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="p">{</span>
   <span class="nx">settings</span> <span class="nx">as</span> <span class="nx">defaultSettings</span><span class="p">,</span>
@@ -1093,15 +1177,14 @@
 <span class="p">};</span>
 </code></pre></div>
 <p>See more about <a href="../../deploying/sentry/">Sentry integration</a>.</p>
-</dd>
-<dt><strong>contentIcons</strong></dt>
-<dd>
+<h2 id="contenticons">contentIcons<a class="headerlink" href="#contenticons" title="Permanent link">#</a></h2>
+<div class="admonition block">
 <p>With this property you can configure Content Types icons.
- Those are visible in Contents view (ex "Folder contents").  The default
- ones are in
- <a href="https://github.com/plone/volto/tree/master/src/config/ContentIcons.jsx">config/ContentIcons.jsx</a>
- and you can extend them in your project's config for custom content types
- using <code>settings.contentIcons</code>.</p>
+Those are visible in Contents view (ex "Folder contents").  The default
+ones are in
+<a href="https://github.com/plone/volto/tree/master/src/config/ContentIcons.jsx">config/ContentIcons.jsx</a>
+and you can extend them in your project's config for custom content types
+using <code>settings.contentIcons</code>.</p>
 <p>In Volto projects, you can configure this for custom content types like:</p>
 <div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">config</span> <span class="nx">from</span> <span class="s1">&#39;@plone/volto/config&#39;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="nx">courseSVG</span> <span class="nx">from</span> <span class="s1">&#39;./icons/course.svg&#39;</span><span class="p">;</span>
@@ -1113,8 +1196,7 @@
     <span class="nx">Course</span><span class="o">:</span> <span class="nx">courseSVG</span><span class="p">,</span>
 <span class="p">};</span>
 </code></pre></div>
-</dd>
-</dl>
+</div>
                 
               
               
