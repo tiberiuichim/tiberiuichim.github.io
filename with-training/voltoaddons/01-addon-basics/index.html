@@ -1731,27 +1731,27 @@
 <li class="toctree-l3"><a class="reference internal" href="../05-objectwidget-block-edit/#write-a-new-volto-widget">6.1. Write a new Volto widget</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../06-cell-renderer/">7. Make the block extendable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06-cell-renderer/">7. Make the block extendible</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../07-misc-addons/">8. Addons - advanced topics</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../07-misc-addons/#q-a">8.1. Q&amp;A</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../07-misc-addons/#bundle-optimization">8.2. Bundle optimization</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../jsbasics/">9. Javascript enhancements</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../jsbasics/#destructuring">9.1. Destructuring</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../jsbasics/#spread">9.2. Spread</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../jsbasics/#arrow-functions">9.3. Arrow functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blocksrestapi/">9. Plone integration with Volto blocks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../blocksrestapi/#block-transformations">9.1. Block transformations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blocksrestapi/#smart-fields">9.2. Smart fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blocksrestapi/#searchable-text-from-blocks">9.3. Searchable text from blocks</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../devenvironment/">10. Developer integration with text editors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../blocksrestapi/">11. Plone integration with Volto blocks</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../blocksrestapi/#block-transformations">11.1. Block transformations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../blocksrestapi/#smart-fields">11.2. Smart fields</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../blocksrestapi/#searchable-text-from-blocks">11.3. Searchable text from blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/">10. About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/glossary/">11. Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/jsbasics/">12. Really short primer on Javascript enhancements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../about/jsbasics/#destructuring">12.1. Destructuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about/jsbasics/#spread">12.2. Spread</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about/jsbasics/#arrow-functions">12.3. Arrow functions</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/">12. About</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../about/glossary/">13. Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/devenvironment/">13. Developer integration with text editors</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../transmogrifier/">Migrating Content with Transmogrifier</a><ul>
@@ -2556,6 +2556,11 @@ work in the “link” mode. We’re registering a new widget called “pick_obj
 By passing <code class="docutils literal notranslate"><span class="pre">widget=&quot;pick_widget&quot;</span></code> to the <code class="docutils literal notranslate"><span class="pre">&lt;Field&gt;</span></code> component we’re
 instructing the form field machinery lookup the <code class="docutils literal notranslate"><span class="pre">pick_object</span></code> widget in the
 widgets Volto registry.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We’ll need a CSV file to play around while developing this addon. We have
+provided one for you to <a class="reference download internal" download="" href="../../_downloads/05a5d35b3d46cf603fa5a245084811d6/forest-areas.csv"><code class="xref download docutils literal notranslate"><span class="pre">download</span></code></a></p>
+</div>
 </div>
 </div>
 </div>

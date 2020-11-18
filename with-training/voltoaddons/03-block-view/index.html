@@ -1731,27 +1731,27 @@
 <li class="toctree-l3"><a class="reference internal" href="../05-objectwidget-block-edit/#write-a-new-volto-widget">6.1. Write a new Volto widget</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../06-cell-renderer/">7. Make the block extendable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06-cell-renderer/">7. Make the block extendible</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../07-misc-addons/">8. Addons - advanced topics</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../07-misc-addons/#q-a">8.1. Q&amp;A</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../07-misc-addons/#bundle-optimization">8.2. Bundle optimization</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../jsbasics/">9. Javascript enhancements</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../jsbasics/#destructuring">9.1. Destructuring</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../jsbasics/#spread">9.2. Spread</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../jsbasics/#arrow-functions">9.3. Arrow functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blocksrestapi/">9. Plone integration with Volto blocks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../blocksrestapi/#block-transformations">9.1. Block transformations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blocksrestapi/#smart-fields">9.2. Smart fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blocksrestapi/#searchable-text-from-blocks">9.3. Searchable text from blocks</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../devenvironment/">10. Developer integration with text editors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../blocksrestapi/">11. Plone integration with Volto blocks</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../blocksrestapi/#block-transformations">11.1. Block transformations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../blocksrestapi/#smart-fields">11.2. Smart fields</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../blocksrestapi/#searchable-text-from-blocks">11.3. Searchable text from blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/">10. About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/glossary/">11. Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/jsbasics/">12. Really short primer on Javascript enhancements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../about/jsbasics/#destructuring">12.1. Destructuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about/jsbasics/#spread">12.2. Spread</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about/jsbasics/#arrow-functions">12.3. Arrow functions</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/">12. About</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../about/glossary/">13. Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/devenvironment/">13. Developer integration with text editors</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../transmogrifier/">Migrating Content with Transmogrifier</a><ul>
@@ -2208,9 +2208,8 @@
   <div class="section" id="improve-the-block-view">
 <h1><span class="section-number">4. </span>Improve the block view<a class="headerlink" href="#improve-the-block-view" title="Permalink to this headline">¶</a></h1>
 <p>Let’s add CSV file parsing.</p>
-<p>There are many CSV parsers available for node/js, we’ll use <a href="#id1"><span class="problematic" id="id2">Papaparse_</span></a> because
-it also works in the browser.
-on.</p>
+<p>There are many CSV parsers available for Nodejs, we’ll use <a class="reference external" href="https://www.npmjs.com/package/papaparse">Papaparse</a> because
+it also works in the browser.</p>
 <p>We’ll need to add the dependency to the addon. When using yarn workspaces, the
 workflow is a bit different. For our simple use case, we could probably run
 <code class="docutils literal notranslate"><span class="pre">yarn</span> <span class="pre">add</span> <span class="pre">papaparse</span></code> inside the <code class="docutils literal notranslate"><span class="pre">src/addons/datatable-tutorial</span></code>, but
@@ -2287,7 +2286,7 @@ the correct way is to run this command through the project root.</p>
 </pre></div>
 </div>
 <p>Writing components where the <code class="docutils literal notranslate"><span class="pre">useEffect</span></code> triggers network calls can be pretty
-tricky. According to the <a href="#id3"><span class="problematic" id="id4">`rule of hooks`_</span></a>, hooks can’t be triggered
+tricky. According to the <a href="#id1"><span class="problematic" id="id2">`rule of hooks`_</span></a>, hooks can’t be triggered
 conditionally, they always have to be run. For this reason it’s important to
 add relevant conditions inside the hook code, so be sure to identify and
 prepare a way to tell, from inside the hook, if the network-fetching action

@@ -1731,27 +1731,27 @@
 <li class="toctree-l3"><a class="reference internal" href="../05-objectwidget-block-edit/#write-a-new-volto-widget">6.1. Write a new Volto widget</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../06-cell-renderer/">7. Make the block extendable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06-cell-renderer/">7. Make the block extendible</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../07-misc-addons/">8. Addons - advanced topics</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../07-misc-addons/#q-a">8.1. Q&amp;A</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../07-misc-addons/#bundle-optimization">8.2. Bundle optimization</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../jsbasics/">9. Javascript enhancements</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../jsbasics/#destructuring">9.1. Destructuring</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../jsbasics/#spread">9.2. Spread</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../jsbasics/#arrow-functions">9.3. Arrow functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blocksrestapi/">9. Plone integration with Volto blocks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../blocksrestapi/#block-transformations">9.1. Block transformations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blocksrestapi/#smart-fields">9.2. Smart fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blocksrestapi/#searchable-text-from-blocks">9.3. Searchable text from blocks</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../devenvironment/">10. Developer integration with text editors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../blocksrestapi/">11. Plone integration with Volto blocks</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../blocksrestapi/#block-transformations">11.1. Block transformations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../blocksrestapi/#smart-fields">11.2. Smart fields</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../blocksrestapi/#searchable-text-from-blocks">11.3. Searchable text from blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/">10. About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/glossary/">11. Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/jsbasics/">12. Really short primer on Javascript enhancements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../about/jsbasics/#destructuring">12.1. Destructuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about/jsbasics/#spread">12.2. Spread</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about/jsbasics/#arrow-functions">12.3. Arrow functions</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/">12. About</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../about/glossary/">13. Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/devenvironment/">13. Developer integration with text editors</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../transmogrifier/">Migrating Content with Transmogrifier</a><ul>
@@ -2459,6 +2459,8 @@ export default withFileData(({ data: { file_path } }) =&gt; file_path)(
 );
 </pre></div>
 </div>
+<p>Here’s how your block would look like now:</p>
+<img alt="../../_images/basic-table-edit.png" src="../../_images/basic-table-edit.png" />
 <div class="section" id="initial-block-data-as-a-reusable-pattern">
 <h2><span class="section-number">5.1. </span>Initial block data as a reusable pattern<a class="headerlink" href="#initial-block-data-as-a-reusable-pattern" title="Permalink to this headline">¶</a></h2>
 <p>For the view component we’ve created a HOC mechanism that grants automatic data

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>11. Glossary &mdash; Plone Training 2020 documentation</title>
+  <title>13. Developer integration with text editors &mdash; Plone Training 2020 documentation</title>
   
 
   
@@ -40,8 +40,8 @@
     
     <link rel="index" title="Index" href="../../../genindex/" />
     <link rel="search" title="Search" href="../../../search/" />
-    <link rel="next" title="12. Javascript enhancements" href="../jsbasics/" />
-    <link rel="prev" title="10. About" href="../" /> 
+    <link rel="next" title="Migrating Content with Transmogrifier" href="../../../transmogrifier/" />
+    <link rel="prev" title="12. Really short primer on Javascript enhancements" href="../jsbasics/" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -1744,14 +1744,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../">10. About</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">11. Glossary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../jsbasics/">12. Javascript enhancements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../glossary/">11. Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jsbasics/">12. Really short primer on Javascript enhancements</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../jsbasics/#destructuring">12.1. Destructuring</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../jsbasics/#spread">12.2. Spread</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../jsbasics/#arrow-functions">12.3. Arrow functions</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../devenvironment/">13. Developer integration with text editors</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">13. Developer integration with text editors</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../transmogrifier/">Migrating Content with Transmogrifier</a><ul>
@@ -2188,7 +2188,7 @@
         
           <li><a href="../../">Volto Addons Development</a> &raquo;</li>
         
-      <li><span class="section-number">11. </span>Glossary</li>
+      <li><span class="section-number">13. </span>Developer integration with text editors</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -2205,98 +2205,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="glossary">
-<h1><span class="section-number">11. </span>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
-<dl class="glossary simple">
-<dt id="term-Addon-Volto">Addon (Volto)</dt><dd><p>a JS package that integrates with Volto’s configuration registry</p>
-</dd>
-<dt id="term-Addon-configuration-loader-Volto">Addon configuration loader (Volto)</dt><dd><p>a function with signature <code class="docutils literal notranslate"><span class="pre">config</span> <span class="pre">=&gt;</span> <span class="pre">config</span></code>.</p>
-</dd>
-<dt id="term-Babel">Babel</dt><dd><p>a Javascript compiler that “transpiles” newer standards JS to something
-that any browser can load.</p>
-</dd>
-<dt id="term-CommonJS">CommonJS</dt><dd><p>a Javascript package standard, the equivalent of a Python wheel or egg.
-Enables Javascript modules.</p>
-</dd>
-<dt id="term-Configuration-registry-Volto">Configuration registry (Volto)</dt><dd><p>a singleton object modeled using JS modules, accessible from the Volto
-project using the <code class="docutils literal notranslate"><span class="pre">~/config</span></code> path.</p>
-</dd>
-<dt id="term-ES6">ES6</dt><dd><p>ECMAScript 6, a newer version of the Javascript language.</p>
-</dd>
-<dt id="term-Express">Express</dt><dd><p>a Javascript HTTP server with a simple API to build custom
-applications. Volto uses it as its server.</p>
-</dd>
-<dt id="term-hoisting-Yarn">hoisting (Yarn)</dt><dd><p>An optimization provided by Yarn. By default Javascript packages will
-directly include dependencies inside their local node_modules. By
-hoisting we’re “lifting” these inner dependencies to the top level
-node_modules and thus optimize the generated bundles. In case two
-dependencies have conflicting version dependencies of the same library,
-the hoisting will not be possible (for that conflicting dependency) and
-you’ll see multiple instances of the same library in the bundle, or
-you’ll see that the addon receives its own node_modules folder.</p>
-</dd>
-<dt id="term-hooks-React">hooks (React)</dt><dd><p>Hooks are a React API that allow function components to use React
-features such as lifecycle methods, states, etc.</p>
-</dd>
-<dt id="term-Hot-Module-Replacement-HMR">Hot Module Replacement (HMR)</dt><dd><p>a development feature provided by Webpack that automatically reloads,
-in the browser, the JS modules that have changed</p>
-</dd>
-<dt id="term-Hydration-SSR">Hydration (SSR)</dt><dd><p>After loading an HTML page generated with SSR in the browser, React can
-“populate” the existing DOM elements, recreate and attach their
-coresponding components.</p>
-</dd>
-<dt id="term-JSX">JSX</dt><dd><p>A dialect of Javascript that resembles XML, it is transpiled by Babel to
-JS functions. React uses JSX as its component templating.</p>
-</dd>
-<dt id="term-middleware-Redux">middleware (Redux)</dt><dd><p>Custom wrappers for the Redux store dispatch methods, the allow
-customizing the behavior of the data flow inside the redux store.</p>
-</dd>
-<dt id="term-mrs-developer">mrs-developer</dt><dd><p>also called “missdev”, a tool similar to buildout’s mr.developer,
-automatically downloads and keeps up to date copies of software and
-addons under development based on definitions stored in
-<code class="docutils literal notranslate"><span class="pre">mrs.developer.json</span></code>. As a byproduct of its update operations, it
-also automatically adjusts <code class="docutils literal notranslate"><span class="pre">jsconfig.json</span></code>, which is used by Volto to
-configure webpack aliases.</p>
-</dd>
-<dt id="term-NPM">NPM</dt><dd><p>the original NodeJS Package Manager. Also a registry of Javascript
-packages, similar to PyPI.</p>
-</dd>
-<dt id="term-Project-Volto">Project (Volto)</dt><dd><p>the product of running <code class="docutils literal notranslate"><span class="pre">create-volto-app</span></code>, a customizable instance of Volto</p>
-</dd>
-<dt id="term-Razzle">Razzle</dt><dd><p>a tool that simplifies SPA and SSR configuration for ReactJS projects.</p>
-</dd>
-<dt id="term-Scoped-packages">Scoped packages</dt><dd><p>Namespace for Javascript packages, they provide a way to avoid naming
-conflicts for common package names.</p>
-</dd>
-<dt id="term-Server-Side-Rendering-SSR">Server-Side Rendering (SSR)</dt><dd><p>when first loading any Plone page, users will get HTML markup that
-closely matches the final DOM structure of the react components used to
-render that page</p>
-</dd>
-<dt id="term-Shadowing-Volto">Shadowing (Volto)</dt><dd><p>webpack provides an “alias” mechanism, where the path for a module can
-be aliased to another module. By using this mechanism Volto enables
-customization (file overrides), similar to z3c.jbot</p>
-</dd>
-<dt id="term-Single-Page-Application-SPA">Single Page Application (SPA)</dt><dd><p>a type of Javascript application that aims to provide a better user
-experience by avoiding unnecessary reloading of the browser page,
-instead uses AJAX to load backend information</p>
-</dd>
-<dt id="term-Transpilation">Transpilation</dt><dd><p>the transformation of Javascript code that uses advanced language
-features, unavailable for some browsers, to code rewritten to support
-them.</p>
-</dd>
-<dt id="term-Webpack">Webpack</dt><dd><p>a tool that loads and bundles code and web resources using loaders</p>
-</dd>
-<dt id="term-Webpack-entrypoint">Webpack entrypoint</dt><dd><p>the main files generated by webpack as a result. They typically contain
-the application source code based on modules bundled together, but it
-can also include other resources, such as static resources.  It can
-contain code to automatically trigger the load of other JS code files
-called “chunks”</p>
-</dd>
-<dt id="term-Yarn">Yarn</dt><dd><p>a popular Javascript package manager similar to NPM.</p>
-</dd>
-<dt id="term-Yeoman">Yeoman</dt><dd><p>a popular scaffolding tool similar to Plone’s mr.bob or ZopeSkel</p>
-</dd>
-</dl>
+  <div class="section" id="developer-integration-with-text-editors">
+<h1><span class="section-number">13. </span>Developer integration with text editors<a class="headerlink" href="#developer-integration-with-text-editors" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://code.visualstudio.com">Visual Studio Code</a> provides a very good integration with the tooling used by
+Volto. If you haven’t done Javascript development with VSC so far, you should
+check the <a class="reference external" href="https://code.visualstudio.com/docs/languages/javascript">VisualStudio Code Javascript guide</a> as it provides a very detailed
+overview of the capabilities and required configuration.</p>
+<p>For Vim, check language integration packages such as <a class="reference external" href="https://github.com/w0rp/ale">ALE</a> or <a class="reference external" href="https://github.com/neoclide/coc.nvim">coc.nvim</a>.</p>
 </div>
 
 
@@ -2307,10 +2222,10 @@ called “chunks”</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../jsbasics/" class="btn btn-neutral float-right" title="12. Javascript enhancements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../../../transmogrifier/" class="btn btn-neutral float-right" title="Migrating Content with Transmogrifier" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../" class="btn btn-neutral float-left" title="10. About" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../jsbasics/" class="btn btn-neutral float-left" title="12. Really short primer on Javascript enhancements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
